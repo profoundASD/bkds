@@ -8,7 +8,11 @@ For use-case context and background: https://profoundasd.com/welcome
 ---------------------------------------------------------------------------
 
 https://profoundasd.com
+
 https://profoundasd.com/blog
+
 https://profoundasd.com/about/
+
 https://profoundasd.com/big-ai-for-autism/
+
 https://profoundasd.com/bicycles-for-the-profoundly-autistic-mind/
