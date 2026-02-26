@@ -1,6 +1,14 @@
-# bkds
-**Brothers Keeper Data Solutions — Forever U — ProfoundASD.com**
 
-Retired source code for an accessible desktop appliance built for individuals with complex accessibility needs. The architecture is metadata-driven to allow UI modifications and administrative configuration without code changes. The current solution in use has been simplified and is being ported to an agentic styled intelligent assistant.
+Brothers Keeper Data Solutions — Forever University — ProfoundASD.com
+
+Retired source code for an accessible desktop appliance built for individuals with complex accessibility needs. The architecture is metadata-driven to allow UI modifications and administrative configuration without code changes. The current solution is being ported to an agentic intelligent assistant in a private repo.
 
 For use-case context and background: https://profoundasd.com/welcome
+
+---------------------------------------------------------------------------
+
+https://profoundasd.com
+https://profoundasd.com/blog
+https://profoundasd.com/about/
+https://profoundasd.com/big-ai-for-autism/
+https://profoundasd.com/bicycles-for-the-profoundly-autistic-mind/
