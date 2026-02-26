@@ -7,6 +7,8 @@ For use-case context and background: https://profoundasd.com/welcome
 
 ---------------------------------------------------------------------------
 
+https://profoundasd.com/welcome
+
 https://profoundasd.com
 
 https://profoundasd.com/blog
