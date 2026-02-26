@@ -1,0 +1,15 @@
+{
+    "speed_test_download": {
+        "command": "speedtest-cli --simple --no-upload | awk '/Download:/{print $2}'",
+        "required": true
+    },
+    "speed_test_upload": {
+        "command": "speedtest-cli --simple --no-download | awk '/Upload:/{print $2}'",
+        "required": true
+    },
+    "speed_test_ping": {
+        "command": "speedtest-cli --simple | awk '/Ping:/{print $2}'",
+        "required": true
+    }
+}
+    

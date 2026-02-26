@@ -1,0 +1,306 @@
+
+{
+    "emulation_metadata": {
+        "description": "This document shows the two-pass generation of the Content Index JSON based on a user profile interested in animals and parks.",
+        "user_profile_summary": {
+            "interests": "Animals, National Parks of the US, Alligators, Gorillas, Giant Catfish, cats, dogs, farm life, farm animals",
+            "reading_level": "Ages 10-14",
+            "location_context": "North Little Rock, Arkansas, USA"
+        },
+        "stages": [
+            "Pass 1: Initial Content Index Generation from Profile (BKDS_STORY_PCL_010)",
+            "Pass 2: Keyword-Driven Content Expansion & De-duplication (BKDS_STORY_PCL_012, PCL_014)",
+            "Final Result: Storing the Enriched Content Index (BKDS_STORY_PCL_015)"
+        ]
+    },
+    "pass_1_output_initial_index": {
+        "userId": "user-animal-lover-02",
+        "profileVersion": "v1.0.0",
+        "generatedTimestamp": "2025-06-10T10:12:00Z",
+        "contentIndex": [
+            {
+                "subject": "Wild Animals",
+                "subjectId": "f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6",
+                "categories": [
+                    {
+                        "category": "Alligators and Crocodiles",
+                        "categoryId": "e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7",
+                        "meta_category": [
+                            "Thing",
+                            "Place",
+                            "Experience"
+                        ],
+                        "metaKeywords": [
+                            "alligators",
+                            "crocodiles",
+                            "reptiles",
+                            "swamps",
+                            "predators"
+                        ]
+                    },
+                    {
+                        "category": "Gorillas and Other Great Apes",
+                        "categoryId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+                        "meta_category": [
+                            "Thing",
+                            "Person",
+                            "Emotion"
+                        ],
+                        "metaKeywords": [
+                            "gorillas",
+                            "apes",
+                            "primates",
+                            "chimpanzees",
+                            "orangutans",
+                            "conservation"
+                        ]
+                    },
+                    {
+                        "category": "Giant Freshwater Fish",
+                        "categoryId": "d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8",
+                        "meta_category": [
+                            "Thing",
+                            "Place",
+                            "Activity"
+                        ],
+                        "metaKeywords": [
+                            "freshwater fish",
+                            "catfish",
+                            "sturgeon",
+                            "alligator gar",
+                            "river monsters"
+                        ]
+                    }
+                ]
+            },
+            {
+                "subject": "Domestic & Farm Animals",
+                "subjectId": "b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7",
+                "categories": [
+                    {
+                        "category": "Common House Pets",
+                        "categoryId": "c9d8e7f6a5b4c3d2e1f0a1b2c3d4e5f6",
+                        "meta_category": [
+                            "Thing",
+                            "Emotion"
+                        ],
+                        "metaKeywords": [
+                            "pets",
+                            "cats",
+                            "dogs",
+                            "domestic animals",
+                            "companionship"
+                        ]
+                    },
+                    {
+                        "category": "Life on a Farm",
+                        "categoryId": "a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0",
+                        "meta_category": [
+                            "Place",
+                            "Activity",
+                            "Thing"
+                        ],
+                        "metaKeywords": [
+                            "farm life",
+                            "livestock",
+                            "cows",
+                            "pigs",
+                            "chickens",
+                            "agriculture"
+                        ]
+                    }
+                ]
+            },
+            {
+                "subject": "US National Parks",
+                "subjectId": "c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8",
+                "categories": [
+                    {
+                        "category": "National Parks Famous for Wildlife",
+                        "categoryId": "f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3",
+                        "meta_category": [
+                            "Place",
+                            "Experience",
+                            "Thing"
+                        ],
+                        "metaKeywords": [
+                            "national parks",
+                            "wildlife",
+                            "animal watching",
+                            "Yellowstone",
+                            "Everglades"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "final_output_enriched_index": {
+        "userId": "user-animal-lover-02",
+        "profileVersion": "v1.0.0",
+        "generatedTimestamp": "2025-06-10T10:14:00Z",
+        "contentIndex": [
+            {
+                "subject": "Wild Animals",
+                "subjectId": "f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6",
+                "categories": [
+                    {
+                        "category": "Alligators and Crocodiles",
+                        "categoryId": "e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7",
+                        "meta_category": [
+                            "Thing",
+                            "Place",
+                            "Experience"
+                        ],
+                        "metaKeywords": [
+                            "alligators",
+                            "crocodiles",
+                            "reptiles",
+                            "swamps",
+                            "predators"
+                        ]
+                    },
+                    {
+                        "category": "Gorillas and Other Great Apes",
+                        "categoryId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+                        "meta_category": [
+                            "Thing",
+                            "Person",
+                            "Emotion"
+                        ],
+                        "metaKeywords": [
+                            "gorillas",
+                            "apes",
+                            "primates",
+                            "chimpanzees",
+                            "orangutans",
+                            "conservation"
+                        ]
+                    },
+                    {
+                        "category": "Giant Freshwater Fish",
+                        "categoryId": "d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8",
+                        "meta_category": [
+                            "Thing",
+                            "Place",
+                            "Activity"
+                        ],
+                        "metaKeywords": [
+                            "freshwater fish",
+                            "catfish",
+                            "sturgeon",
+                            "alligator gar",
+                            "river monsters"
+                        ]
+                    },
+                    {
+                        "category": "The American Alligator",
+                        "categoryId": "b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4",
+                        "meta_category": [
+                            "Thing",
+                            "Place"
+                        ],
+                        "metaKeywords": [
+                            "American alligator",
+                            "reptiles",
+                            "Southeastern US",
+                            "marshes",
+                            "apex predator"
+                        ]
+                    }
+                ]
+            },
+            {
+                "subject": "Domestic & Farm Animals",
+                "subjectId": "b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7",
+                "categories": [
+                    {
+                        "category": "Common House Pets",
+                        "categoryId": "c9d8e7f6a5b4c3d2e1f0a1b2c3d4e5f6",
+                        "meta_category": [
+                            "Thing",
+                            "Emotion"
+                        ],
+                        "metaKeywords": [
+                            "pets",
+                            "cats",
+                            "dogs",
+                            "domestic animals",
+                            "companionship"
+                        ]
+                    },
+                    {
+                        "category": "Life on a Farm",
+                        "categoryId": "a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0",
+                        "meta_category": [
+                            "Place",
+                            "Activity",
+                            "Thing"
+                        ],
+                        "metaKeywords": [
+                            "farm life",
+                            "livestock",
+                            "cows",
+                            "pigs",
+                            "chickens",
+                            "agriculture"
+                        ]
+                    },
+                    {
+                        "category": "Popular Breeds of Dogs",
+                        "categoryId": "7d4e5f3b8a1c2d3e4f5a6b7c8d9e0f1a",
+                        "meta_category": [
+                            "Thing",
+                            "Activity"
+                        ],
+                        "metaKeywords": [
+                            "dogs",
+                            "dog breeds",
+                            "Labrador Retriever",
+                            "German Shepherd",
+                            "Golden Retriever"
+                        ]
+                    }
+                ]
+            },
+            {
+                "subject": "US National Parks",
+                "subjectId": "c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8",
+                "categories": [
+                    {
+                        "category": "National Parks Famous for Wildlife",
+                        "categoryId": "f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3",
+                        "meta_category": [
+                            "Place",
+                            "Experience",
+                            "Thing"
+                        ],
+                        "metaKeywords": [
+                            "national parks",
+                            "wildlife",
+                            "animal watching",
+                            "Yellowstone",
+                            "Everglades"
+                        ]
+                    },
+                    {
+                        "category": "National Parks in the Southern US",
+                        "categoryId": "1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e",
+                        "meta_category": [
+                            "Place",
+                            "Experience",
+                            "Activity"
+                        ],
+                        "metaKeywords": [
+                            "national parks",
+                            "Hot Springs",
+                            "Big Bend",
+                            "Congaree",
+                            "Southern US"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

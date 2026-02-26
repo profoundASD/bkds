@@ -1,0 +1,20 @@
+{
+    "sound_stereo_output": "Active Port: iec958-stereo-output",
+    "sound_stereo_volume": "Volume: front-left: 22937 /  35% / -27.36 dB,   front-right: 22937 /  35% / -27.36 dB",
+    "sound_mic_detail": "alsa_output.usb-C-Media_Electronics_Inc._USB_Audio_Device-00.iec958-stereo.2.monitor",
+    "sound_mic_volume": "Volume: front-left: 65536 / 100% / 0.00 dB,   front-right: 65536 / 100% / 0.00 dB",
+    "bt_status": "Powered: yes",
+    "last_5_bt": "Device E5:7D:0C:24:8C:B2 BT4.0+2.4G Mouse",
+    "net_interface": "lo:loopback:connected (externally) wlp2s0:wifi:disconnected enp1s0:ethernet:unavailable",
+    "net_wifi_status": "wifi:disconnected",
+    "io_keyboard_list": " Virtual core keyboard  id=3 [master keyboard (2)]  Virtual core XTEST keyboard  id=5 [slave keyboard (3)]  Power Button  id=6 [slave keyboard (3)]  Video Bus  id=7 [slave keyboard (3)]  Power Button  id=8 [slave keyboard (3)]  Sleep Button  id=9 [slave keyboard (3)]  C-Media Electronics Inc. USB Audio Device id=23 [slave keyboard (3)]",
+    "io_mouse_list": " Virtual core pointer  id=2 [master pointer (3)]  Virtual core XTEST pointer  id=4 [slave pointer (2)]",
+    "apps_top": "[python3,/usr/bin/syncthing,conky,/usr/lib/xorg/Xorg,node,/sbin/init,/usr/bin/wireplumber,/usr/bin/pipewire-pulse,npm,xfdesktop,/usr/bin/pipewire,/usr/bin/python3,/usr/lib/snapd/snapd,/usr/bin/python3,@dbus-daemon,xfwm4,/usr/lib/systemd/systemd-timesyncd,/usr/lib/systemd/systemd-journald,/usr/sbin/wpa_supplicant,/usr/lib/polkit-1/polkitd]",
+    "active_usb_device_list": "Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub",
+    "Bus 001 Device 002": "ID 0bda:c821 Realtek Semiconductor Corp. Bluetooth Radio",
+    "Bus 001 Device 004": "ID 0d8c:0014 C-Media Electronics, Inc. Audio Adapter (Unitek Y-247A)",
+    "Bus 002 Device 001": "ID 1d6b:0003 Linux Foundation 3.0 root hub",
+    "usage": "xinput get-button-map <device name>",
+    "start_utc_ts": "2024-12-22T04:05:40Z",
+    "end_utc_ts": "2024-12-22T04:05:41Z"
+}

@@ -1,0 +1,50 @@
+{
+    "os_version": {
+        "command": "lsb_release -a | awk '/Description:/{print $2, $3}'",
+        "required": true
+    },
+    "ui_version": {
+        "command": "xfce4-session --version",
+        "required": true
+    },
+    "chrome_browser_version": {
+        "command": "google-chrome --version",
+        "required": false
+    },
+    "syncthing_version": {
+        "command": "syncthing --version | head -1",
+        "required": false
+    },
+    "kernel_version": {
+        "command": "uname -r",
+        "required": true
+    },
+    "number_of_packages": {
+        "command": "dpkg-query -f '.\n' -W | wc -l",
+        "required": true
+    },
+    "last_update_check": {
+        "command": "stat -c %y /var/lib/apt/periodic/update-success-stamp",
+        "required": true
+    },
+    "reboot_required": {
+        "command": "[ -f /var/run/reboot-required ] && echo 'Restart Now' || echo 'Restart Later'",
+        "required": true
+    },
+    "reboot_warn": {
+        "command": "[ -f /var/run/reboot-required ] && echo 'red' || echo 'green'",
+        "required": true
+    },
+    "update_needed": {
+        "command": "apt list --upgradable | wc -l",
+        "required": true
+    },
+    "installed_python_version": {
+        "command": "python --version",
+        "required": false
+    },
+    "disk_usage": {
+        "command": "df -h | grep -E '^/dev/'",
+        "required": false
+    }
+}

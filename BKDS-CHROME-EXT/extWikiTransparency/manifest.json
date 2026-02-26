@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "BKDS Wiki Page Opacity Transition",
+    "version": "1.0",
+    "description": "Fade in pages on wikipedia.org from opacity 0 to 1 over 1.5 seconds.",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["*://*.wikipedia.org/*"],
+        "css": ["styleWiki.css"],
+        "js": ["content.js"],
+        "run_at": "document_start"
+      }
+    ]
+  }
+  

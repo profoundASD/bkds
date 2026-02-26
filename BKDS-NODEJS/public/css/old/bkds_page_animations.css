@@ -1,0 +1,44 @@
+@keyframes zoomFromCenter {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: .8;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for zooming in */
+@keyframes zoomIn {
+    0% {
+        transform: scale(.5); /* Initially scaled down */
+        opacity: 0;
+        visibility: visible; /* Make visible when animation starts */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible; /* Ensure it stays visible after animation */
+    }
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 1vw 1vw rgba(0, 255, 0, 0.6);
+        background-color: rgba(0, 255, 0, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 1.5vw 1.5vw rgba(0, 255, 0, 0.7);
+        background-color: rgba(0, 255, 0, 0.5);
+    }
+}

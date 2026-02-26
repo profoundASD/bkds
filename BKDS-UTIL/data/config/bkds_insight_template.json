@@ -1,0 +1,81 @@
+[
+    {
+        "e4697dbd87fabd249dd6ff36eb10fe52b4a75f1cc1821eb6c581fdc668035216": {
+            "insight_details": {
+                "url_id": "e4697dbd87fabd249dd6ff36eb10fe52b4a75f1cc1821eb6c581fdc668035216",
+                "cluster_id": "a9aa781af0acb2e26f5948bf67ce0a36",
+                "subject_title": "Space Launch System",
+                "search_term": "SLS (Space Launch System)",
+                "data_category": "rockets",
+                "data_subject": "rocket_models"
+            },
+            "text_block": {
+                "source": "NASA",
+                "content": "The Space Launch System (SLS) is a super heavy-lift expendable launch vehicle, which has been under development by NASA in the United States since its announcement in 2011. Its prime contractor is Boeing, and it is intended to launch the Orion Multi-Purpose Crew Vehicle as well as other payloads for deep space missions.",
+                "description": "Overview of the Space Launch System"
+            },
+            "media": {
+                "videos": [
+                    {
+                        "vid_title": "List of Space Launch System launches",
+                        "vid_desc": "data",
+                        "vid_url": "https://www.youtube.com/watch?v=3HPH3xpE6qA",
+                        "vid_thumb": "https://i.ytimg.com/vi/3HPH3xpE6qA/hqdefault.jpg",
+                        "data_source": "youtube"
+                    }
+                ],
+                "feat_gallery_img": [
+                    {
+                        "img_title": "Titan (rocket family)",
+                        "img_desc": "Titan (rocket family)",
+                        "image_url": "https://live.staticflickr.com/0/52993434466_d9eec8b013.jpg"
+                    },
+                    {
+                        "img_title": "Titan (rocket family) 3",
+                        "img_desc": "Titan (rocket family)) More desc3",
+                        "image_url": "https://live.staticflickr.com/0/52993434466_d9eec8b014.jpg"
+                    }
+                ],
+                "default_img": [
+                    {
+                        "img_title": "Titan (rocket family)",
+                        "img_desc": "Titan (rocket family) More desc1",
+                        "image_url": "https://live.staticflickr.com/0/52993434466_d9eec8b013.jpg"
+                    }
+                ],
+                "gallery_img": [
+                    {
+                        "img_title": "Titan (rocket family)",
+                        "img_desc": "Titan (rocket family)) More desc2",
+                        "image_url": "https://live.staticflickr.com/0/52993434466_d9eec8b015.jpg"
+                    },
+                    {
+                        "img_title": "Titan (rocket family) 3",
+                        "img_desc": "Titan (rocket family)) More desc3",
+                        "image_url": "https://live.staticflickr.com/0/52993434466_d9eec8b014.jpg"
+                    }
+                ]
+            },
+            "related_topics": [
+                {
+                    "related_url": "example.com/related_insight_1",
+                    "related_cluster": "related_cluster_1",
+                    "related_title": "Related Insight 1",
+                    "related_category": "Related Category 1"
+                },
+                {
+                    "related_url": "example.com/related_insight_2",
+                    "related_cluster": "related_cluster_2",
+                    "related_title": "Related Insight 2",
+                    "related_category": "Related Category 2"
+                },
+                {
+                    "related_url": "example.com/related_insight_3",
+                    "related_cluster": "related_cluster_3",
+                    "related_title": "Related Insight 3",
+                    "related_category": "Related Category 3"
+                }
+            ]
+        }
+    }
+]

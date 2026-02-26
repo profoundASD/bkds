@@ -1,0 +1,358 @@
+/* Reset default styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Global styles for body and HTML */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-color: #c3c3c3;
+}
+
+/* Shared container styles */
+.container {
+    display: flex;
+    height: 100%;
+}
+
+/* Insight container styles */
+.insight-container {
+    display: flex;
+    margin-left: -0vw;
+    margin-top: -1.5vh;
+    background-color: #c3c3c3;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Shared styles for insight sections */
+.insight-left, .insight-center, .insight-right .photo-gallery-center{
+    background-color: #4e4e4e;
+    height: 100vh;
+    overflow-y: hidden;
+    flex-grow: 1;
+}
+
+.photo-gallery-center{
+    width: 95vw;
+}
+
+/* Insight left container styles */
+.insight-left {
+    margin-top: 1vh;
+    background-color: #c3c3c3;
+    width: 48vw;
+    min-height: 100%;
+    padding-left: 3vw;
+    border-radius: .15vh;
+}
+
+/* Insight center container styles */
+.insight-center {
+    display: flex;
+    width: 38vw;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* Insight right container styles */
+.insight-right {
+    background-color: #4e4e4e;
+    overflow-y: auto;
+    width: 10vw;
+    overflow: hidden;
+}
+
+/* Insight extract styles */
+.insight-extract {
+    text-align: left;
+    padding-right: 5vw;
+    font-size: 2vh;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Insight center top styles */
+.insight-center-top {
+    background-color: #4e4e4e;
+    height: 60%;
+    overflow-y: auto;
+    border-radius: .75vh;
+}
+
+/* Insight center bottom styles */
+.insight-center-bottom {
+    background-color: #4e4e4e;
+    overflow-y: auto;
+    height: 35%;
+    margin-top: .75vh;
+    padding: .5vh;
+    border-radius: .5vh;
+}
+
+/* Video grid styles */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: .75vw;
+    background-color: #c3c3c3;
+}
+
+/* Video grid item styles */
+.video-grid-item {
+    display: flex;
+    flex-direction: column;
+
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #c3c3c3;
+    border-radius: .5vh;
+    background-color: #4e4e4e;
+    padding: .25vw;
+    object-fit: contain;
+}
+
+/* Video thumbnail styles */
+.video-thumbnail {
+    margin-top: .25vh;
+    width: 95%;
+    height: 95%;
+    border-radius: .5vh;
+}
+
+/* Video description styles */  
+.video-description {
+    flex-grow: 1;
+    background-color: #c3c3c3;
+    text-align: left;   
+}
+
+/* Video icon styles */
+.video-icon {
+    max-width: 3vw;
+    max-height: 3vh;
+    margin-left: 1vw;
+}
+
+/* Insight extract styles (continued) */
+.insight-extract {
+    margin-top: -0.5vh;
+}
+
+.insight-extract-text-container {
+    width: 100%;
+
+}
+
+/* Insight extract text styles */
+.insight-extract-text {
+    background-color: #fff;;
+    box-sizing: border-box;
+    border-radius:1vh;
+    min-height:60vh;
+    padding-left:2vw;
+    padding-top: 1vh;
+    padding-right: 5vw;
+    font-size:1.1em;
+}
+
+/* Insight extract header styles */
+.insight-extract-header {
+    width: 100%;
+    background-color: #c3c3c3;
+    padding: 1vh 0;
+    box-sizing: border-box;
+    object-fit: contain;
+    padding-top: 4vh;
+}
+
+.insight-extract-header img {
+    padding: 0.25vw;
+    height: auto;
+    width: 3vw;
+
+}
+
+/* Insight left toolbar container styles */
+.insight-left-toolbar-container, .insight-left-toolbar-control-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    background-color: #c3c3c3;
+}
+
+.insight-left-toolbar-container{
+    padding-top:1vh;
+}
+
+
+
+/* Styles for icons within the toolbar */
+.insight-left-toolbar-container, .insight-left-toolbar-control-container  img {
+    padding: 0.25vw;
+    min-height: 3vh;
+    height: 5vh;
+    height: auto;
+}
+
+.insight-left-toolbar-control-container {
+    padding-bottom: .15vh;
+    background-color: #ffffff;
+}
+
+
+/* Insight extract image styles */
+.insight-extract img {
+    padding: 0.25vw;
+    height: auto;
+    width: 3vw;
+    font-size: 1.5vh;
+}
+
+/* Insight title styles */
+.insight-title, .insight-main-title {
+    font-size: 3vh;
+    font-weight: bold;
+    color: #4e4e4e;
+    text-align: left;
+    margin-top: 2vh;
+    line-height: 1.2;
+}
+
+/* Insight title icon and text styles */
+.insight-title-icon-text {
+    font-size: 2vh;
+    align-items: center;
+}
+
+/* Insight title image styles */
+.insight-title img {
+    padding: 0.25vw;
+    height: auto;
+    width: 3vw;
+}
+
+/* Insight category styles */
+.insight-category {
+    font-size: 2vh;
+    font-weight: bold;
+    color: #4e4e4e;
+    text-align: left;
+    margin-top: 0.75vh;
+    margin-bottom: 0.5vh;
+    line-height: 1.2;
+    padding-bottom:2vh;
+}
+
+/* Related topic container styles */
+.related-topic-container {
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+/* Related topic styles */
+.related-topic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25vw;
+    border-radius: 0.5vh;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-size: 1.25em;
+    text-align: center;
+    margin-top: .5vh;
+    margin-bottom: .5vh;
+    min-height: 4vh;
+    text-decoration: none;
+
+    
+}
+
+/* Hover and visited styles for related topic links */
+.related-topic:hover, .related-topic:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Enlarged image styles */
+.enlarged-image {
+    width: 95%;
+    margin: 10px auto;
+    display: block;
+}
+
+/* Insight thumbnail grid container styles */
+.insight-thumbnail-grid-container {
+    height: 100%;
+}
+
+
+  
+/* Insight thumbnail grid styles */
+.insight-thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .15vw 0;
+    padding: .15vw;
+}
+
+/* Insight thumbnail grid image styles */
+.insight-thumbnail-grid img {
+    display: block;
+    max-width: 10vw;
+    padding:.5vw;
+    border-radius:.75vh;
+}
+
+
+.insight-thumbnail-grid-container {
+    height: 100%;
+    object-fit:contain;
+}
+
+/* Insight center top styles */
+.photo-gallery-center-insight-center-top {
+    background-color: #4e4e4e;
+    height: 95vh;
+    overflow-y: auto;
+    border-radius: .75vh;
+}
+
+/* Center header bar styles */
+.center-header-bar .photo-gallery-center-header-bar{
+    height: 3vh;
+    max-height: 3vh;
+    background-color: #c3c3c3;
+    color: #4e4e4e;
+    z-index: 1000;
+    font-size: 2vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25vh 1vw;
+    border-radius: .15vh;
+}
+
+/* Center header bar image styles */
+.center-header-bar img {
+    padding: 0 0.25vw;
+    height: 2vh;
+    width: auto;
+}
+
+/* Insight title container styles */
+.insight-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

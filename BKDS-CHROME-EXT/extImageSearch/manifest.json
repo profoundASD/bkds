@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "BKDS Google Image Search",
+  "version": "1.0",
+  "description": "Display only Maps, Images, and Videos tabs on Google Search",
+  "permissions": ["activeTab"],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*"],
+      "matches": [
+        "https://www.google.com/*",
+        "https://www.google.co.uk/*",
+        "https://www.google.ca/*",
+        "https://www.google.com.au/*",
+        "https://www.google.co.in/*"
+      ],
+      "exclude_matches": [
+        "https://photos.google.com/*",
+        "https://www.google.com/photos/*"
+      ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/search?*",
+        "https://www.google.co.uk/search?*",
+        "https://www.google.ca/search?*",
+        "https://www.google.com.au/search?*",
+        "https://www.google.co.in/search?*"
+      ],
+      "exclude_matches": [
+        "https://photos.google.com/*",
+        "https://www.google.com/photos/*"
+      ],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

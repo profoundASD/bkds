@@ -1,0 +1,77 @@
+(START)
+   |
+   V
+[ User Profile Data ]
+   |
+   +---- (Input: BKDS_STORY_PCL_005: Meta-Category Taxonomy)
+   |
+   V
+[ BKDS_STORY_PCL_010: Initial Pass - Generate Baseline Index ]
+   |  (Generates Subjects, Categories, & metaKeywords)
+   |
+   V
+[ BKDS_STORY_PCL_012: Begin Keyword-Driven Expansion Loop (Single Pass) ]
+   |
+   |-----> For each `metaKeyword`:
+   |          |
+   |          V
+   |       ( BKDS_STORY_PCL_013: Expansion Governor Check? )
+   |          | (e.g., < 200 new items AND < 10x initial count?)
+   |          |
+   |       ---NO---> (Skip Keyword) --------->-------+
+   |       |                                        |
+   |       ---YES--> [ Generate New Potential Category ] <---+
+   |                   |                              |    |
+   |                   V                              | (Next Keyword)
+   |                ( BKDS_STORY_PCL_014: Duplicate Check? ) |
+   |                   |                              |
+   |                ---YES--> (Discard) --------------+
+   |                |
+   |                ---NO---> [ Add New Category to Index ]
+   |
+   V
+[ BKDS_STORY_PCL_080: Quality Analysis on Final Index ]
+   |
+   +----YES (Passed)---> [ Proceed ]
+   |
+   +----NO (Failed)---> [ BKDS_STORY_PCL_090: Re-prompt & Restart Generation ]
+   |
+   V
+[ BKDS_STORY_PCL_016: Store Enriched Content Index (JSON) ]
+   |
+   V
+(END OF PHASE 1)
+
+
+############################################################
+
+(START OF PHASE 2)
+   |
+   V
+[ Retrieves Enriched Content Index (JSON) ]
+   |
+   V
+[ BKDS_STORY_PCL_020: Multi-Level Prompt Generation ]
+   |  (Generates prompts for Subjects, Categories, and Category+Keyword combos)
+   |  (Input: BKDS_STORY_PCL_022: Prompt Generation Governor)
+   |
+   V
+[ BKDS_STORY_PCL_030: List Generation via LLM ]
+   |  (Executes all prompts to create lists of items like "F-16", "Yosemite", etc.)
+   |  (Uses BKDS_STORY_PCL_110: Prompt Templates)
+   |  (Handles errors via BKDS_STORY_PCL_120/130: Retry/Failure Logic)
+   |
+   V
+[ BKDS_STORY_PCL_040: Story Generation via LLM ]
+   |  (For each item on each list, generate a full descriptive story)
+   |  (Uses BKDS_STORY_PCL_110: Prompt Templates)
+   |  (Handles errors via BKDS_STORY_PCL_120/130: Retry/Failure Logic)
+   |
+   V
+[ BKDS_STORY_PCL_050: Store Generated Story Content in Database ]
+   |
+   V
+[ BKDS_STORY_PCL_100: Place All Stories in "Pending Approval" Queue ]
+   |
+   V
+(END)

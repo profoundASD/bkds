@@ -1,0 +1,57 @@
+# STAGING TABLES
+dev.stg_wiki_api_results
+dev.stg_flickr_api_results
+dev.stg_youtube_api_results
+dev.stg_img_cache
+dev.tbl_subject_master_index
+dev.tbl_subject_master_index4
+
+# MIDDLE TIER TABLES
+dev.tbl_web_content_categories
+dev.tbl_web_content_img_master
+dev.llm_proto_prompt
+dev.llm_base_prompts
+dev.llm_persona
+dev.llm_processed_contents
+
+
+# WAREHOUSE TABLES
+wh.tbl_web_content_img_cache_0527
+wh.tbl_web_feed_master
+wh.tbl_web_content_img_master
+
+# MIDDLE TIER VIEWS
+dev.v_subject_master_index
+# STAGING VIEWS
+dev.v_youtube_api_results
+dev.v_wiki_api_results
+dev.v_flickr_api_results
+dev.v_stg_image_cache
+
+dev.v_llm_api_prompt_source
+dev.v_llm_enriched_insights
+dev.v_web_content_text
+dev.v_llm_base_prompts
+dev.v_llm_persona
+
+dev.v_llm_api_prompt_source
+dev.v_web_content_text
+dev.v_web_content_img_master
+dev.v_web_content_video
+
+dev.v_content_media_subject
+
+dev.v_web_content_img
+
+
+dev.v_default_img_ref
+dev.v_content_media_cluster
+dev.v_web_content_img_cache
+dev.v_content_media_url
+dev.v_content_media_category
+
+
+# WAREHOUSE VIEWS
+wh.v_web_content_feed_master
+wh.v_web_content_img_cache
+

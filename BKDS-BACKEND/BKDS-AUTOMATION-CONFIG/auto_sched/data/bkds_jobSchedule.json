@@ -1,0 +1,258 @@
+{
+    "base_paths": {
+        "util_python": "$BKDS_UTIL_PYTHON",
+        "util_shell": "$BKDS_UTIL_SHELL",
+        "desktop_shell": "$BKDS_DESKTOP_SHELL",
+        "util_data": "$BKDS_UTIL_DATA"
+    },
+        "tasks": [
+        {
+            "name": "Screenshot Reporting",
+            "interpreter": "bash",
+            "script_path": "{util_shell}/bkds_ScreenShot.sh",
+            "automation_id": "BKDS_AUTO_REPORTING_SCREENSHOTS",
+            "arguments": {
+                "arg_1": "BKDS_AUTO_STEP_REPORTING_SCREENSHOTS"
+            },
+            "min_wait_min": 10,
+            "schedule": "active",
+            "interval_desc": "Intended for 15 min interval",
+            "updated_date": "2024-06-07T02:12:28.484Z"
+        },
+        {
+            "name": "Screenshot Indexing",
+            "interpreter": "python3",
+            "script_path": "{util_python}/bkds_indexScreenShots.py",
+            "automation_id": "BKDS_AUTO_SCREENSHOT_INDEX",
+            "arguments": {
+                "arg_1": "BKDS_AUTO_STEP_SCREENSHOT_INDEX"
+            },
+            "min_wait_min": 45,
+            "schedule": "active",
+            "interval_desc": "Intended for 15 min interval",
+            "updated_date": "2025-10-13T11:59:28.484Z"
+        },
+        {
+            "name": "Browser Export",
+            "interpreter": "python3",
+            "script_path": "{util_python}/bkds_browserExport.py",
+            "automation_id": "BKDS_AUTO_REPORTING_BROWSER_EXPORT",
+            "arguments": {
+                "arg_1": "BKDS_AUTO_STEP_REPORTING_BROWSER_EXPORT"
+            },
+            "min_wait_min": 240,
+            "schedule": "active",
+            "interval_desc": "Intended for 120 min interval",
+            "updated_date": "2024-06-19T11:59:28.484Z"
+        },
+        {
+            "name": "Main Feed Content Generation",
+            "interpreter": "bash",
+            "script_path": "{util_shell}/bkds_mainFeedContentGen.sh",
+            "automation_id": "BKDS_AUTO_CONTENT_GEN_MAIN_FEED",
+            "arguments": {
+                "arg_1": "BKDS_AUTO_STEP_CONTENT_GEN_MAIN_FEED"
+            },
+            "min_wait_min": 30,
+            "schedule": "active",
+            "interval_desc": "Intended for 5 min interval",
+            "updated_date": "2025-10-13T11:59:28.484Z"
+        },
+        {
+            "name": "Category Content Generation",
+            "interpreter": "bash",
+            "script_path": "{util_shell}/bkds_mainFeedContentGen.sh",
+            "automation_id": "BKDS_AUTO_CONTENT_GEN_CATEGORY",
+            "arguments": {
+                "arg_1": "BKDS_AUTO_STEP_CONTENT_GEN_CATEGORY"
+            },
+            "min_wait_min": 90,
+            "schedule": "active",
+            "interval_desc": "Intended for 5 min interval",
+            "updated_date": "2025-10-13T11:59:28.484Z"
+        },
+        {
+            "name": "Image Master Shuffle",
+            "interpreter": "bash",
+            "script_path": "{util_shell}/bkds_mainFeedContentGen.sh",
+            "automation_id": "BKDS_AUTO_IMG_MASTER_SHUFFLE",
+            "arguments": {
+                "arg_1": "BKDS_AUTO_STEP_IMG_MASTER_SHUFFLE"
+            },
+            "min_wait_min": 90,
+            "schedule": "active",
+            "interval_desc": "Intended for 90 min interval",
+            "updated_date": "2025-10-13T11:59:28.484Z"
+        },
+        {
+            "name": "Rocket Launch Content Generation",
+            "interpreter": "bash",
+            "script_path": "{util_shell}/bkds_mainFeedContentGen.sh",
+            "automation_id": "BKDS_AUTO_CONTENT_GEN_ROCKET_LAUNCH",
+            "arguments": {
+                "arg_1": "BKDS_AUTO_STEP_CONTENT_GEN_ROCKET_LAUNCH"
+            },
+            "min_wait_min": 90,
+            "schedule": "active",
+            "interval_desc": "Intended for 120 min interval",
+            "updated_date": "202406-28T02:12:28.484Z"
+        },
+        {
+            "name": "Conky Restart",
+            "interpreter": "bash",
+            "script_path": "{desktop_shell}/bkds_ConkyLaunch.sh",
+            "automation_id": "BKDS_AUTO_CONKY_RESTART",
+            "arguments": {
+                "arg_1": "BKDS_AUTO_STEP_CONKY_RESTART"
+            },
+            "min_wait_min": 30,
+            "schedule": "active",
+            "interval_desc": "Intended for 30 min interval",
+            "updated_date": "2024-12-25T02:12:28.484Z"
+        },
+        {
+            "name": "Insight Collection",
+            "interpreter": "bash",
+            "script_path": "{util_shell}/bkds_insightCollection.sh",
+            "automation_id": "BKDS_AUTO_INSIGHT_COLLECTION",
+            "arguments": {
+                "arg_1": "BKDS_AUTO_STEP_INSIGHT_COLLECTION"
+            },
+            "min_wait_min": 15,
+            "schedule": "active",
+            "interval_desc": "Intended for 15 min interval",
+            "updated_date": "2024-12-25T02:12:28.484Z"
+        },
+        {
+            "name": "Redshift Adjustment",
+            "interpreter": "bash",
+            "script_path": "{util_shell}/bkds_redShift.sh",
+            "automation_id": "BKDS_AUTO_REDSHIFT",
+            "arguments": {
+                "arg_1": "BKDS_AUTO_STEP_REDSHIFT"
+            },
+            "min_wait_min": 15, 
+            "schedule": "active",
+            "interval_desc": "Intended for 15 min interval",
+            "updated_date": "2024-10-13T11:59:28.484Z"
+        },
+        {
+            "name": "Archive old log Files",
+            "interpreter": "bash",
+            "script_path": "{util_shell}/bkds_archiveFiles.sh",
+            "automation_id": "BKDS_AUTO_FILE_ARCHIVE_LOG",
+            "arguments": {
+                "arg_1": "BKDS_AUTO_STEP_FILE_ARCHIVE_LOG",
+                "arg_2": "log",
+                "arg_3": "3000"
+            },
+            "min_wait_min": 20,
+            "schedule": "active",
+            "interval_desc": "Intended for 120 min interval",
+            "updated_date": "2024-12-25T02:12:28.484Z"
+        },
+        {
+            "name": "Archive old log Files",
+            "interpreter": "bash",
+            "script_path": "{util_shell}/bkds_archiveFiles.sh",
+            "automation_id": "BKDS_AUTO_FILE_ARCHIVE_SYNC_CONFLICT",
+            "arguments": {
+                "arg_1": "BKDS_AUTO_STEP_FILE_ARCHIVE_SYNC_CONFLICT",
+                "arg_2": "sync-conflict*",
+                "arg_3": "30"
+            },
+            "min_wait_min": 25,
+            "schedule": "active",
+            "interval_desc": "Intended for 120 min interval",
+            "updated_date": "2024-12-25T02:12:28.484Z"
+        }
+        ,  
+        {
+            "name": "Archive old Zip Files",
+            "interpreter": "bash",
+            "script_path": "{util_shell}/bkds_archiveFiles.sh",
+            "automation_id": "BKDS_AUTO_FILE_ARCHIVE_ZIP",
+            "arguments": {
+                "arg_1": "BKDS_AUTO_STEP_FILE_ARCHIVE_ZIP",
+                "arg_2": "zip",
+                "arg_3": "30"
+            },
+            "min_wait_min": 45,
+            "schedule": "active",
+            "interval_desc": "Intended for 120 min interval",
+            "updated_date": "2024-12-25T02:12:28.484Z"
+        },
+        {
+            "name": "Archive Delete Old Files",
+            "interpreter": "bash",
+            "script_path": "{util_shell}/bkds_archiveFiles.sh",
+            "automation_id": "BKDS_AUTO_FILE_ARCHIVE_DELETE_ALL",
+            "arguments": {
+                "arg_1": "BKDS_AUTO_STEP_FILE_ARCHIVE_DELETE_ALL",
+                "arg_2": "remove_ready_for_deletion",
+                "arg_3": "3000",
+                "arg_4": "--delete"
+            },
+            "min_wait_min": 35,
+            "schedule": "active",
+            "interval_desc": "Intended for 35 min interval",
+            "updated_date": "2024-12-25T02:12:28.484Z"
+        }
+        ,
+        {
+            "name": "mouse configuration fail safe config",
+            "interpreter": "bash",
+            "script_path": "{util_shell}/bkds_mouseSettings.sh",
+            "automation_id": "BKDS_AUTO_MOUSE_CONFIG_CHECK",
+            "arguments": {
+                "arg_1": "BKDS_AUTO_STEP_MOUSE_CONFIG_CHECK"
+            },
+            "min_wait_min": 30,
+            "schedule": "active",
+            "interval_desc": "Intended for 85 min interval",
+            "updated_date": "2024-12-25T02:12:28.484Z"
+        },
+        {
+            "name": "General Statistics Generation",
+            "interpreter": "python3",
+            "script_path": "{util_python}/bkds_StatsGen.py",
+            "automation_id": "BKDS_AUTO_QOS_GENERAL",
+            "arguments": {
+                "arg_1": "BKDS_AUTO_STEP_QOS_GENERAL",
+                "arg_2": "{util_data}/config/bkds_Stats.json"
+            },
+            "min_wait_min": 30,
+            "schedule": "active",
+            "interval_desc": "Intended for 20 min interval",
+            "updated_date": "2024-12-25T02:12:28.484Z"
+        },
+        {
+            "name": "Software Statistics Generation",
+            "interpreter": "python3",
+            "script_path": "{util_python}/bkds_StatsGen.py",
+            "automation_id": "BKDS_AUTO_QOS_OS",
+            "arguments": {
+                "arg_1": "BKDS_AUTO_STEP_QOS_OS",
+                "arg_2": "{util_data}/config/bkds_SoftwareStats.json"
+            },
+            "min_wait_min": 90,
+            "schedule": "active",
+            "interval_desc": "Intended for 60 min interval",
+            "updated_date": "2024-12-25T02:12:28.484Z"
+        },
+        {
+            "name": "Speed Statistics Generation",
+            "interpreter": "python3",
+            "script_path": "{util_python}/bkds_StatsGen.py",
+            "automation_id": "BKDS_AUTO_QOS_SPEED",
+            "arguments": {
+                "arg_1": "BKDS_AUTO_STEP_QOS_SPEED",
+                "arg_2": "{util_data}/config/bkds_SpeedStats.json"
+            },
+            "min_wait_min": 1440,
+            "schedule": "active",
+            "interval_desc": "Intended for 1440 min interval",
+            "updated_date": "2024-12-25T02:12:28.484Z"
+        }
+    ]
+}

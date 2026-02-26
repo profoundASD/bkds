@@ -1,0 +1,130 @@
+{
+  "emulation_metadata": {
+    "description": "This document shows the two-pass generation of the Content Index JSON based on a user profile interested in aviation.",
+    "user_profile_summary": {
+      "interests": "Aviation, air force bases, air shows, helicopter takeoffs, F-16s, propeller planes",
+      "reading_level": "Ages 10-14"
+    },
+    "stages": [
+      "Pass 1: Initial Content Index Generation from Profile (BKDS_STORY_PCL_010)",
+      "Pass 2: Keyword-Driven Content Expansion & De-duplication (BKDS_STORY_PCL_012, PCL_013, PCL_014)",
+      "Final Result: Storing the Enriched Content Index (BKDS_STORY_PCL_016)"
+    ]
+  },
+  "pass_1_output_initial_index": {
+    "userId": "user-aviation-enthusiast-01",
+    "profileVersion": "v2.1.0",
+    "generatedTimestamp": "2025-06-10T10:15:00Z",
+    "contentIndex": [
+      {
+        "subject": "Military Aviation",
+        "subjectId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+        "categories": [
+          {
+            "category": "Famous Fighter Jets of the US Air Force",
+            "categoryId": "f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6",
+            "meta_category": ["Thing", "Event"],
+            "metaKeywords": ["fighter jets", "USAF", "F-16 Fighting Falcon", "F-22 Raptor", "air combat"]
+          },
+          {
+            "category": "Important Helicopters in the US Military",
+            "categoryId": "e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7",
+            "meta_category": ["Thing", "Activity"],
+            "metaKeywords": ["helicopters", "military", "choppers", "Black Hawk", "Chinook", "transport"]
+          }
+        ]
+      },
+      {
+        "subject": "Aviation Events",
+        "subjectId": "b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7",
+        "categories": [
+          {
+            "category": "Major US Air Shows",
+            "categoryId": "d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8",
+            "meta_category": ["Event", "Place", "Experience"],
+            "metaKeywords": ["air shows", "aerobatics", "Blue Angels", "Thunderbirds", "aviation events"]
+          }
+        ]
+      },
+      {
+        "subject": "Types of Airplanes",
+        "subjectId": "c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8",
+        "categories": [
+          {
+            "category": "Classic Propeller Planes",
+            "categoryId": "a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9",
+            "meta_category": ["Thing", "Event"],
+            "metaKeywords": ["propeller planes", "vintage aircraft", "biplanes", "monoplanes", "piston engine"]
+          }
+        ]
+      }
+    ]
+  },
+  "final_output_enriched_index": {
+    "userId": "user-aviation-enthusiast-01",
+    "profileVersion": "v2.1.0",
+    "generatedTimestamp": "2025-06-10T10:17:00Z",
+    "contentIndex": [
+      {
+        "subject": "Military Aviation",
+        "subjectId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+        "categories": [
+          {
+            "category": "Famous Fighter Jets of the US Air Force",
+            "categoryId": "f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6",
+            "meta_category": ["Thing", "Event"],
+            "metaKeywords": ["fighter jets", "USAF", "F-16 Fighting Falcon", "F-22 Raptor", "air combat"]
+          },
+          {
+            "category": "Important Helicopters in the US Military",
+            "categoryId": "e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7",
+            "meta_category": ["Thing", "Activity"],
+            "metaKeywords": ["helicopters", "military", "choppers", "Black Hawk", "Chinook", "transport"]
+          },
+          {
+            "category": "The F-16 Fighting Falcon",
+            "categoryId": "c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1",
+            "meta_category": ["Thing", "Experience"],
+            "metaKeywords": ["F-16", "multirole fighter", "General Dynamics", "dogfighting", "air superiority"]
+          }
+        ]
+      },
+      {
+        "subject": "Aviation Events",
+        "subjectId": "b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7",
+        "categories": [
+          {
+            "category": "Major US Air Shows",
+            "categoryId": "d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8",
+            "meta_category": ["Event", "Place", "Experience"],
+            "metaKeywords": ["air shows", "aerobatics", "Blue Angels", "Thunderbirds", "aviation events"]
+          },
+          {
+            "category": "The Blue Angels Aerobatic Team",
+            "categoryId": "b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4",
+            "meta_category": ["Person", "Event", "Experience"],
+            "metaKeywords": ["Blue Angels", "Navy", "aerobatic team", "F/A-18 Hornet", "demonstration"]
+          }
+        ]
+      },
+      {
+        "subject": "Types of Airplanes",
+        "subjectId": "c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8",
+        "categories": [
+          {
+            "category": "Classic Propeller Planes",
+            "categoryId": "a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9",
+            "meta_category": ["Thing", "Event"],
+            "metaKeywords": ["propeller planes", "vintage aircraft", "biplanes", "monoplanes", "piston engine"]
+          },
+          {
+            "category": "Heavy-Lift Transport Helicopters",
+            "categoryId": "f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0",
+            "meta_category": ["Thing", "Activity"],
+            "metaKeywords": ["transport", "heavy-lift", "cargo", "Chinook", "Sikorsky CH-53"]
+          }
+        ]
+      }
+    ]
+  }
+}

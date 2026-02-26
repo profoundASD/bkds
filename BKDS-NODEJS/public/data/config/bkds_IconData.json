@@ -1,0 +1,473 @@
+[
+  {
+    "src": "/img/bkds_UI_SpeakAndGo.png",
+    "alt": "Voice Search",
+    "text": "Voice Search",
+    "type": "voice_search_general",
+    "action": "iconClick",
+    "filterCategory": "handleSpeechRecognition"
+  },
+  {
+    "src": "/img/bkds_UI_SpeakAndGo.png",
+    "alt": "Voice Search",
+    "text": "Voice Search",
+    "type": "desktop_control_icon",
+    "action": "iconClick",
+    "filterCategory": "voice_search_general"
+  },
+  {
+    "src": "/img/bkds_UI_Home_alt.png",
+    "alt": "Home",
+    "text": "Home",
+    "type": "desktop_control_icon",
+    "action": "iconClick",
+    "filterCategory": "home"
+  },
+  {
+    "src": "/img/bkds_UI_photos.png",
+    "alt": "Photos",
+    "text": "Photos",
+    "type": "desktop_control_icon",
+    "action": "iconClick",
+    "filterCategory": "photos"
+  },
+  {
+    "src": "/img/bkds_UI_weather.png",
+    "alt": "Weather",
+    "text": "Weather",
+    "type": "desktop_control_icon",
+    "action": "iconClick",
+    "filterCategory": "weather"
+  },
+  {
+    "src": "/img/bkds_desktop_UI_rockets.png",
+    "alt": "Rockets",
+    "text": "Rockets",
+    "type": "desktop_control_icon",
+    "action": "iconClick",
+    "filterCategory": "rockets"
+  },
+  {
+    "src": "/img/bkds_desktop_UI_airplane.png",
+    "alt": "Aviation",
+    "text": "Aviation",
+    "type": "desktop_control_icon",
+    "action": "iconClick",
+    "filterCategory": "aviation"
+  },
+  {
+    "src": "/img/bkds_desktop_UI_Earth.png",
+    "alt": "Places",
+    "text": "Places",
+    "type": "desktop_control_icon",
+    "action": "iconClick",
+    "filterCategory": "places"
+  },
+  {
+    "src": "/img/bkds_UI_flowers_trees.png",
+    "alt": "plants flowers trees filter",
+    "text": "Plants",
+    "type": "desktop_control_icon",
+    "action": "iconClick",
+    "filterCategory": "flowers_trees_plants"
+  }
+  ,
+  {
+    "src": "/img/bkds_UI_tv_music.png",
+    "alt": "TV / Music / Entertainment filter",
+    "text": "TV / Music",
+    "type": "desktop_control_icon",
+    "action": "iconClick",
+    "filterCategory": "tv_and_entertainment"
+  },
+  {
+    "src": "/img/bkds_desktop_UI_News.png",
+    "alt": "News",
+    "text": "News",
+    "type": "desktop_control_icon",
+    "action": "iconClick",
+    "filterCategory": "news"
+  },
+  {
+    "src": "/img/bkds_UI_health_fitness.png",
+    "alt": "Exercise",
+    "text": "Exercise",
+    "type": "desktop_control_icon",
+    "action": "iconClick",
+    "filterCategory": "fitness"
+  },
+  {
+    "src": "/img/bkds_desktop_UI_msg.png",
+    "alt": "Messages",
+    "text": "Messages",
+    "type": "desktop_control_icon",
+    "action": "iconClick",
+    "filterCategory": "msg"
+  },
+  {
+    "src": "/img/bkds_desktop_UI_Apps_hist.png",
+    "alt": "Web History",
+    "text": "Web History",
+    "type": "desktop_control_icon",
+    "action": "iconClick",
+    "filterCategory": "browser_hist"
+  },
+  {
+    "src": "/img/bkds_UI_call.png",
+    "alt": "Call",
+    "text": "Call",
+    "type": "desktop_control_icon",
+    "action": "iconClick",
+    "filterCategory": "call"
+  },
+  {
+    "src": "/img/bkds_UI_more_apps_leftCircle.png",
+    "alt": "More Apps Left",
+    "text": "More Apps Left",
+    "type": "more_apps_insight_control_icon",
+    "filterCategory": "more_apps_left"
+  },
+  {
+    "src": "/img/bkds_UI_more_apps_rightCircle.png",
+    "alt": "More Apps Right",
+    "text": "More Apps Right",
+    "type": "more_apps_insight_controlq_icon",
+    "filterCategory": "more_apps_right"
+  },
+  {
+    "src": "/img/bkds_UI_show_desktop.png",
+    "alt": "Show Desktop",
+    "text": "Desktop",
+    "type": "power_center_control",
+    "action" : "powerControl",
+    "filterCategory": "DESKTOP_SHOW"
+  },
+  {
+    "src": "/img/bkds_UI_Sleep.png",
+    "alt": "Suspend the computer",
+    "text": "Sleep",
+    "type": "power_center_control",
+    "action" : "powerControl",
+    "filterCategory": "POWER_SLEEP"
+  }
+  ,
+  {
+    "src": "/img/bkds_UI_Restart.png",
+    "alt": "Restart the computer",
+    "text": "Restart",
+    "type": "power_center_control",
+    "action" : "powerControl",
+    "filterCategory": "POWER_REBOOT"
+  },
+  {
+    "src": "/img/bkds_UI_photoScreenShots.png",
+    "alt": "Screenshot photos",
+    "text": "Screenshots",
+    "type": "desktop_app_search_screenshots",
+    "url": "javascript:void(0);",
+    "filterCategory": "screenshots",
+    "class": "desktop_search_screenshots"
+  },
+  {
+    "src": "/img/bkds_UI_gPhotosFilter.png",
+    "alt": "Google Photos Subject Link",
+    "text": "Google Photos",
+    "type": "desktop_app_search_photos",
+    "url": "https://photos.google.com",
+    "filterCategory": "search_photos"
+  },
+  {
+    "src": "/img/bkds_UI_flickr.png",
+    "alt": "Flickr Subject Link",
+    "text": "Flickr",
+    "type": "desktop_app_search_speech",
+    "url": "https://www.flickr.com",
+    "filterCategory": "search_flickr"
+  },
+  {
+    "src": "/img/bkds_UI_Google_Maps_Logo.png",
+    "alt": "Google maps Subject Link",
+    "text": "Google Maps",
+    "type": "toolbar_search_speech_result",
+    "url": "https://www.google.com/maps/search/@@_search_term_@@",
+    "filterCategory": "toolbar_search_gmaps"
+  },
+  {
+    "src": "/img/bkds_UI_Google_Earth_icon.png",
+    "alt": "Google Earth Subject Link",
+    "text": "Google Earth",
+    "type": "toolbar_search_speech_result",
+    "url": "https://earth.google.com/web/search/@@_search_term_@@",
+    "filterCategory": "toolbar_search_earth"
+  },
+  {
+    "src": "/img/bkds_UI_YTGrey.png",
+    "alt": "Youtube Subject Link",
+    "text": "YouTube",
+    "type": "toolbar_search_speech_result",
+    "url": "https://youtube.com/search/?q=@@_search_term_@@",
+    "filterCategory": "toolbar_search_youtube"
+  },
+  {
+    "src": "/img/bkds_UI_YTMusic.png",
+    "alt": "Youtube Music Subject Link",
+    "text": "YouTube Music",
+    "type": "toolbar_search_speech_result",
+    "url": "https://music.youtube.com/search/?q=@@_search_term_@@",
+    "filterCategory": "toolbar_search_youtube_music"
+  },
+  {
+    "src": "/img/bkds_UI_flickr.png",
+    "alt": "Flickr Subject Link",
+    "text": "Flickr Photos",
+    "type": "toolbar_search_speech_result",
+    "url": "https://www.flickr.com/search/?q=@@_search_term_@@",
+    "filterCategory": "toolbar_search_flickr"
+  },
+  {
+    "src": "/img/bkds_UI_gPhotosFilter.png",
+    "alt": "Google Photos Link",
+    "text": "Google Photos",
+    "type": "toolbar_search_speech_result",
+    "url": "https://photos.google.com",
+    "filterCategory": "search_google_photos"
+  },
+  {
+    "src": "/img/bkds_UI_WikiMedia.png",
+    "alt": "Wikimedia Commons badge Subject Link",
+    "text": "Wikimedia Commons",
+    "type": "toolbar_search_speech_result",
+    "url": "https://www.google.com/search?q=@@_search_term_@@+site:wikimedia.org&tbm=isch",
+    "filterCategory": "toolbar_search_wikimedia"
+  },
+  {
+    "src": "/img/bkds_UI_wiki.png",
+    "alt": "Wikipedia Commons badge Subject Link",
+    "text": "Wikipiedia",
+    "type": "toolbar_search_speech_result",
+    "url": "https://www.google.com/search?q=@@_search_term_@@+site:wikipedia.org&tbm=isch",
+    "filterCategory": "toolbar_search_wikipedia"
+  },
+  {
+    "src": "/img/bkds_UI_GoogleImageSearch.png",
+    "alt": "Google images search",
+    "text": "Google Images",
+    "type": "toolbar_search_speech_result",
+    "url": "https://www.google.com/search?q=@@_search_term_@@+site:flickr.com+OR+site:wikipedia.org+OR+site:wikimedia.org+OR+site:spacex.com+OR+site:nextspaceflight.com+OR+site:RocketLaunch.live/&hl=en&tbm=isch",
+    "filterCategory": "toolbar_search_google"
+  },
+  {
+    "src": "/img/bkds_UI_Google_Maps_Logo.png",
+    "alt": "Google maps Subject Link",
+    "text": "Google Maps",
+    "type": "q",
+    "url": "https://www.google.com/maps/search/@@_search_term_@@",
+    "filterCategory": "toolbar_search_gmaps"
+  },
+  {
+    "src": "/img/bkds_UI_Google_Earth_icon.png",
+    "alt": "Google Earth Subject Link",
+    "text": "Google Earth",
+    "type": "desktop_search_speech_result",
+    "url": "https://earth.google.com/web/search/@@_search_term_@@",
+    "filterCategory": "toolbar_search_earth"
+  },
+  {
+    "src": "/img/bkds_UI_YTGrey.png",
+    "alt": "Youtube Subject Link",
+    "text": "YouTube Videos",
+    "type": "desktop_search_speech_result",
+    "url": "https://youtube.com/search/?q=@@_search_term_@@",
+    "filterCategory": "toolbar_search_youtube"
+  },
+  {
+    "src": "/img/bkds_UI_YTMusic.png",
+    "alt": "Youtube Music Subject Link",
+    "text": "YouTube Music",
+    "type": "desktop_search_speech_result",
+    "url": "https://music.youtube.com/search/?q=@@_search_term_@@",
+    "filterCategory": "toolbar_search_youtube_music"
+  },
+  {
+    "src": "/img/bkds_UI_flickr.png",
+    "alt": "Flickr Subject Link",
+    "text": "Flickr Photos",
+    "type": "desktop_search_speech_result",
+    "url": "https://www.flickr.com/search/?q=@@_search_term_@@",
+    "filterCategory": "toolbar_search_flickr"
+  },
+  {
+    "src": "/img/bkds_UI_WikiMedia.png",
+    "alt": "Wikimedia Commons badge Subject Link",
+    "text": "Wikimedia Commons",
+    "type": "desktop_search_speech_result",
+    "url": "https://www.google.com/search?q=@@_search_term_@@+site:wikimedia.org&tbm=isch",
+    "filterCategory": "desktop_search_wikimedia"
+  },
+  {
+    "src": "/img/bkds_UI_wiki.png",
+    "alt": "Wikipedia Commons badge Subject Link",
+    "text": "Wikipiedia Images",
+    "type": "desktop_search_speech_result",
+    "url": "https://www.google.com/search?q=@@_search_term_@@+site:wikipedia.org&tbm=isch",
+    "filterCategory": "desktop_search_wikipedia"
+  },
+  {
+    "src": "/img/bkds_UI_GoogleImageSearch.png",
+    "alt": "Google images search",
+    "text": "Google Images",
+    "type": "desktop_search_speech_result",
+    "url": "https://www.google.com/search?q=@@_search_term_@@+site:flickr.com+OR+site:wikipedia.org+OR+site:wikimedia.org+OR+site:spacex.com+OR+site:nextspaceflight.com+OR+site:RocketLaunch.live/&hl=en&tbm=isch",
+    "filterCategory": "desktop_search_google"
+  },
+  {
+    "src": "/img/bkds_desktop_UI_Apps.png",
+    "alt": "Search all image sources",
+    "text": "All Apps",
+    "type": "desktop_search_speech_result",
+    "url": "https://www.google.com/search?q=@@_search_term_@@+site:youtube.com+OR+site:flickr.com+OR+site:wikipedia.org+OR+site:wikimedia.org+OR+site:spacex.com+OR+site:nextspaceflight.com+OR+site:RocketLaunch.live/&hl=en&tbm=isch",
+    "filterCategory": "desktop_search_general"
+  },
+  {
+    "src": "/img/bkds_UI_Home_alt.png",
+    "alt": "Home",
+    "text": "Home",
+    "type": "desktop_search_speech_result",
+    "url" : "htttp://localhost:3000",
+    "filterCategory": "desktop_search_home"
+    },
+  {
+    "src": "/img/bkds_UI_GoogleImageSearch.png",
+    "alt": "Google Image Search",
+    "text": "Google Image Search",
+    "type": "voice_search",
+    "url": "https://www.google.com/search?q=@@_search_term_@@+site:flickr.com+OR+site:wikipedia.org+OR+site:wikimedia.org+OR+site:spacex.com+OR+site:nextspaceflight.com+OR+site:RocketLaunch.live/&hl=en&tbm=isch",
+    "filterCategory": "desktop_search_default"
+  },
+  {
+    "src": "/img/bkds_UI_YTGrey.png",
+    "alt": "Youtube Voice Search",
+    "text": "Youtube Voice Search",
+    "type": "voice_search_youtube",
+    "filterCategory": "voice_search_youtube"
+  },
+  {
+    "src": "/img/bkds_desktop_UI_ListenTransparent.png",
+    "alt": "Listen",
+    "text": "Listen",
+    "type": "subject_reader",
+    "filterCategory": "tts_listen"
+  },
+  {
+    "src": "/img/bkds_desktop_UI_StopTransparent.png",
+    "alt": "Stop",
+    "text": "Stop",
+    "type": "subject_reader",
+    "filterCategory": "tts_listen"
+  },
+  {
+    "src": "/img/bkds_desktop_UI_PauseTransparent.png",
+    "alt": "Pause",
+    "text": "Pause",
+    "type": "subject_reader",
+    "filterCategory": "tts_listen"
+  },
+  {
+    "src": "/img/bkds_desktop_UI_blank.png",
+    "alt": "",
+    "text": "",
+    "type": "subject_header"
+  },
+  {
+    "src": "/img/bkds_UI_Home_alt.png",
+    "alt": "Refresh",
+    "text": "Home",
+    "type": "toolbar_home",
+    "url" : "http://localhost:3000",
+    "filterCategory": "toolbar_home"
+  },
+  {
+    "src": "/img/bkds_UI_Google_Earth_icon.png",
+    "alt": "Google Earth Subject Link",
+    "text": "Google Earth",
+    "type": "subject_header",
+    "url": "https://www.google.com/maps/search/@@_search_term_@@"
+  },
+  {
+    "src": "/img/bkds_UI_Google_Maps_Logo.png",
+    "alt": "Google Maps Subject Link",
+    "text": "Google Maps",
+    "type": "subject_header",
+    "url": "https://www.google.com/maps/search/@@_search_term_@@"
+  },
+  {
+    "src": "/img/bkds_UI_wiki.png",
+    "alt": "Wiki Subject Link",
+    "text": "Wikipedia",
+    "type": "subject_header",
+    "url": "https://www.google.com/maps/search/@@_search_term_@@"
+  },
+  {
+    "src": "/img/bkds_UI_flickr.png",
+    "alt": "Flickr Subject Link",
+    "text": "Flickr",
+    "type": "subject_header",
+    "url": "https://www.google.com/maps/search/@@_search_term_@@"
+  },
+  {
+    "src": "/img/bkds_UI_WikiMedia.png",
+    "alt": "Wikimedia Commons badge Subject Link",
+    "type": "photo_title"
+  },
+  {
+    "src": "/img/bkds_UI_Flickr.png",
+    "alt": "Flickr Badge",
+    "type": "photo_title"
+  },
+  {
+    "src": "/img/bkds_UI_YTGrey.png",
+    "alt": "YouTube Watch Badge",
+    "type": "watch_title"
+  },
+  {
+    "src": "/img/bkds_UI_GoogleImageSearch.png",
+    "alt": "Google Image Search",
+    "text": "Image Search",
+    "type": "subject_header",
+    "url:": "https://www.google.com/maps/search/@@_search_term_@@"
+  },
+  {
+    "src": "/img/bkds_UI_YTGrey.png",
+    "alt": "YouTube Watch Badge",
+    "type": "subject_header",
+    "url": "https://youtube.com/search/?q=@@_search_term_@@"
+  },
+  {
+    "src": "/img/bkds_desktop_UI_blank.png",
+    "alt": "",
+    "text": "",
+    "type": "subject_header"
+  },
+  {
+    "src": "/img/bkdsSpeakAndGoTransparent.png",
+    "alt": "Speak and Go",
+    "text": "Speak and Go",
+    "type": "subject_header",
+    "url:": "https://www.google.com/maps/search/@@_search_term_@@",
+    "class": "speech-recognition-button",
+    "filterCategory": "more_apps_right"
+  },
+  {
+    "src": "/img/bkds_UI_HomeTransparent.png",
+    "alt": "Go Home Button",
+    "text": "Home",
+    "type": "subject_header",
+    "url:": "https://localhost:3000"
+  },
+  {
+    "src": "/img/bkds_UI_BKDS.jpg",
+    "alt": "BKDS Logo",
+    "type": "bkds_logo0",
+    "url:": "https://localhost:3000"
+  }
+]

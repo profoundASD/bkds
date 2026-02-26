@@ -1,0 +1,23 @@
+  {
+    "manifest_version": 3,
+    "name": "BKDS YouTube Volume Setter",
+    "version": "1.0",
+    "description": "Set YouTube volume to 100% automatically.",
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "scripting"
+    ],
+    "host_permissions": [
+      "https://www.youtube.com/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }

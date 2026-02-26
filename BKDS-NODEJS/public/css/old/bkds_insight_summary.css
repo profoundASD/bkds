@@ -1,0 +1,50 @@
+.insight-summary-container{
+    background-color:#ffffff;
+    width: 70%;
+    border-style:solid 3px;
+    padding:1%;
+    margin-bottom:1em;
+    border-radius:4%;
+}
+
+
+
+.insight-summary {
+    display: flex;
+    margin-bottom: 1rem;
+    align-content:left;
+    flex-wrap: wrap; /* Add this to allow wrapping */
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+}
+
+.insight-summary img {
+    object-fit: cover;
+    max-width: 90%; /* Ensure the image doesn't exceed 50% width */
+    border-radius:5%;
+
+}
+
+.insight-summary div {
+    flex: 1 1 50%; /* Flex-grow, Flex-shrink, Flex-basis */
+    word-wrap: break-word; /* Ensure words don't overflow */
+    background-color:#ffffff;
+}
+
+.custom-top-container {
+    top: 0; /* Align to the top */
+    flex: 0 0 14vw; /* Flex grow, shrink, and basis set to 20% of viewport width */
+    z-index: 1000; /* Ensure it's above other content */
+    /* Set the actual height of the container */
+    height:auto;
+}
+
+.custom-top-container img {
+    max-width: 100%;
+    min-width: 6%;
+}
+
+.hidden-post{
+    display:none;
+}

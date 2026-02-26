@@ -1,0 +1,35 @@
+conky.config = {
+    use_xft = true,
+    out_to_console = false,
+    override_utf8_locale = true,
+    double_buffer = true,
+    no_buffers = true,
+    text_buffer_size = 32768,
+    imlib_cache_size = 0,
+    own_window = true,
+    own_window_type = 'desktop',
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    update_interval = 15,  -- Updates every 15 seconds
+    total_run_times = 0,
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = false,
+    use_xft = true,
+    font = 'Ubuntu Mono:size=30',
+    xftalpha = 0.8,
+    uppercase = false,
+    default_color = '#9b9494',
+  
+    gap_y = 360,
+    gap_x = 50,
+}
+
+conky.text = [[
+    ${goto 5}${font DejaVu Sans:size=50}${time %I:%M %p}${font}
+    ${goto 5}${font Ubuntu Mono:size=50}${execpi 3600 date +"%A"|awk '{$1=$1};1'}${font}
+    
+    ${voffset -15}${goto 5}${font DejaVu Sans:size=40}${execpi 3600 date +"%B %d, %Y"|awk '{$1=$1};1'}${font}    
+]]

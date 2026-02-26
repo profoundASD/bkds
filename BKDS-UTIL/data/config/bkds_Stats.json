@@ -1,0 +1,136 @@
+{
+    "sound_stereo_output": {
+        "command": "pactl list sinks | grep 'Active Port' | sed 's/\\t//g'",
+        "required": true
+      },
+      "sound_stereo_volume": {
+        "command": "pactl get-sink-volume @DEFAULT_SINK@ | head -1 | tr -d '\\t\\n\\r'",
+        "required": true
+      },
+      "sound_stereo_desc": {
+        "command": "pactl list sinks | grep -A 10 'Name:.*@DEFAULT_SINK@' | grep -m 1 'Description:' | cut -d ':' -f2 | tr -d '\\t\\n\\r'",
+        "required": true
+      },
+      "sound_stereo_driver": {
+        "command": "pactl list sinks | grep -A 10 'Name:.*@DEFAULT_SINK@' | grep -m 1 'Driver:' | cut -d ':' -f2 | tr -d '\\t\\n\\r'",
+        "required": true
+      },      
+      "sound_mic": {
+        "command": "pactl list sources | awk -v RS='' '/State: RUNNING/ && /Description:.*[Mm]icrophone/ {gsub(/.*Description: /, \"\"); print}' | head -n 1",
+        "required": true
+    },
+    "sound_mic_driver": {
+        "command": "pactl list sinks | grep -m 1 'Driver:' | cut -d ':' -f2 | tr -d '\\t\\n\\r'",
+        "required": true
+    },    
+    "sound_mic_detail": {
+        "command": "pactl info | grep 'Default Source' | cut -d ' ' -f3 | tr -d '\\t\\n\\r'",
+        "required": true
+    },
+    "sound_mic_volume": {
+        "command": "volume=$(pactl list sources | grep -A 15 \"$(pactl info | grep 'Default Source' | cut -d ' ' -f3)\" | grep 'Volume:' | head -1 | tr -d '\\t\\n\\r'); if [ -z \"$volume\" ]; then echo 'available'; else echo \"$volume\"; fi",
+        "required": true
+    },
+    "webcam_info": {
+        "command": "bash -c \"lsusb | grep -iE 'webcam|Integrated Camera' | head -n 1 | awk -F':' '{print substr(\\$3, 5)}' | sed 's/Technology/Tech./g' | sed 's/Corporation/Corp./g' | sed 's/Integrated/Integr./g' | cut -c 1-35\"",
+        "required": true
+    },
+    "bt_status": {
+        "command": "bluetoothctl show | grep 'Powered' | tr -d '\\t\\n\\r'",
+        "required": true
+    },
+    "last_5_bt": {
+        "command": "bluetoothctl devices | head -5",
+        "required": true
+    },
+    "net_interface": {
+        "command": "nmcli -t -f DEVICE,TYPE,STATE dev status | head -n 100 | tr '\\n' ' ' | cut -c 1-1000",
+        "required": true
+    },    
+    "net_eth": {
+        "command": "nmcli con show --active | grep eth",
+        "required": true
+    },
+    "net_wifi": {
+        "command": "nmcli con show --active | grep wifi",
+        "required": true
+    },
+    "net_wifi_status": {
+        "command": "nmcli -t -f TYPE,STATE dev status | grep wifi",
+        "required": true
+    },
+    "net_wifi_strength": {
+        "command": "nmcli -f IN-USE,SIGNAL dev wifi | grep '^\\*' | awk '{print $2}'",
+        "required": true
+    },
+    "io_keyboard_list": {
+        "command": "xinput --list | grep -i 'keyboard' | tr -s ' ' | tr '\t' ' ' | tr -cd '[:print:]'        ",
+        "required": true
+    },
+    "io_mouse_list": {
+        "command": "xinput --list | grep -i 'pointer' | tr -s ' ' | tr '\t' ' ' | tr -cd '[:print:]'        ",
+        "required": true
+    },
+    "power_connection_type": {
+        "command": "if [ -z \"$(upower -e | grep 'BAT')\" ]; then echo 'AC Power'; else upower -i $(upower -e | grep 'BAT') | grep 'state' | awk '{print $2}'; fi",
+        "required": true
+    },
+    "power_level": {
+        "command": "if [ -z \"$(upower -e | grep 'BAT')\" ]; then echo 'N/A'; else upower -i $(upower -e | grep 'BAT') | grep 'percentage' | awk '{print $2}'; fi",
+        "required": true
+    },
+    "apps_browser": {
+        "command": "wmctrl -l | grep -i 'brave'",
+        "required": true
+    },
+    "apps_top": {
+        "command": "ps aux --sort=-%cpu | head -n 21 | awk '{print $11}' | tail -n 20 | tr '\\n' ',' | sed 's/,$//' | awk '{print \"[\"$0\"]\"}'",
+        "required": true
+    },
+    "util_memory": {
+        "command": "free | grep Mem | awk '{printf \"%.2f%%\", $3/$2 * 100}'",
+        "required": true
+    },
+    "util_processor": {
+        "command": "mpstat 1 1 | awk '/^Average:/ && $2 == \"all\" {print $3\"%\"}'",
+        "required": true
+    },
+    "util_home_space_avail": {
+        "command": "df -h ~ | awk 'NR==2 {print $4}'",
+        "required": true
+    },
+    "util_home_space_used": {
+        "command": "df -h ~ | awk 'NR==2 {print $3}'",
+        "required": true
+    },
+    "active_usb_port_count": {
+        "command": "lsusb | wc -l",
+        "required": true
+    },
+    "active_usb_device_list": {
+        "command": "lsusb",
+        "required": true
+    },
+    "keyboard_detail": {
+        "command": "xinput list-props $(xinput --list --name-only | grep -i keyboard | head -n 1)",
+        "required": true
+    },
+    "mouse_detail": {
+        "command": "xinput list-props $(xinput --list --name-only | grep -i pointer | head -n 1)",
+        "required": true
+    },
+    "mouse_map": {
+        "command": "xinput get-button-map $(xinput --list --name-only | grep -i pointer | head -n 1)",
+        "required": true
+    },
+    "audio_3_5mm_activity": {
+        "command": "if pactl list sinks | grep -A 1 'Active Port' | grep -q 'analog-output'; then echo 'active'; else echo 'inactive'; fi",
+        "required": true
+    },
+    "audio_hdmi_activity": {
+        "command": "if pactl list sinks | grep -A 1 'Active Port' | grep -q 'hdmi-output'; then echo 'active'; else echo 'inactive'; fi",
+        "required": true
+    }
+        
+}
+    

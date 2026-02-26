@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wiki Image Search Results</title>
+    <style>
+        .search-results {
+            padding-left: 10%;
+            padding-right: 10%;
+            text-align: center;
+        }
+        .category-section {
+            margin-top: 10vh;
+            padding: 3vw;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .category-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 5vh;
+        }
+        .post_container {
+            margin-top: 2%;
+            border-width: 2px;
+            display: block; /* Ensuring each post container is a block */
+        }
+        .top_post_section, .bottom_post_section {
+            display: flex;
+            flex-direction: column; /* Stack child elements vertically */
+            align-items: center;
+            justify-content: center;
+        }
+        .user, .post-text-box, .container {
+            width: 100%; /* Adjust width to fit the vertical layout */
+            margin-bottom: 2%; /* Space between elements */
+        }
+    </style>
+</head>
+<body>
+    <div id="search-results" class="search-results"></div>
+    <script src="../../js/bkds_WikiSearch.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

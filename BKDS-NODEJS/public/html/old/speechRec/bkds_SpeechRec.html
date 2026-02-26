@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Recognition Search Launcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            height: 100vh;
+            justify-content: center;
+            background-color: #D3D3D3;
+            overflow:hidden;
+        }
+        #output {
+            font-size: 80pt;
+            max-width: 100%;
+            word-wrap: break-word;
+            text-align: center;
+        }
+        .italic {
+            font-style: italic;
+        }
+        .pulsate {
+            animation: pulse 0.5s infinite alternate;
+            font-size: 100pt;
+            opacity: 0.1; /* Add this line to make the text fade in and out */
+        }
+
+        @keyframes pulse {
+            from { opacity: 0.1; } /* Start with opacity 0 */
+            to { opacity: 1; } /* End with opacity 1 */
+        }
+    </style>
+
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poller+One">
+    <div class='header' style=" text-align:right;  
+                                font-family:Poller One;
+                                font-size:10pt;
+                                background-color:#999999; color: #FFFFFF !important; 
+                                display: flex; justify-content: space-between; 
+                                align-items: center; padding: 0 1%; 
+                                height:4%; ">
+        <div class="header" style="font-size:2em;">
+            Forever University
+        </div>
+        <div class='header' style="padding-left: 72%; padding-top:.12%; font-size:2em; float:left; ">
+        BKDS
+        </div>
+    <div class='header' style=" padding-top:.05%;   font-size:.65em; ">
+        <div class='header'>
+            Brothers Keeper<br>
+        </div>
+        <div class='header'>
+            Data Solutions
+        </div>
+    </div>
+    </div> 
+
+    <div style="padding-top:8%; text-align:center;" id="output" class="pulsate">SPEAK!</div>
+    
+    <script type="module" src="../../js/bkds_SpeechRec.js"></script>
+</body>
+</html>
