@@ -1,0 +1,13 @@
+{
+    "launch_mission_id": 5301,
+    "launch_mission": "CRS2 SpX-32 (Dragon)",
+    "launch_pad_id": 2,
+    "launch_pad_name": "Kennedy Space Center",
+    "launch_pad_country": "United States",
+    "launch_desc": "A SpaceX Falcon 9 rocket will launch the\nCRS2 SpX-32 (Dragon) mission on Monday,\nApril 21, 2025 at 8:15 AM (UTC).",
+    "launch_est_time": "2025-04-21T08:15Z",
+    "launch_purpose": "ISS Cargo",
+    "launch_quicktext": "Falcon 9 - CRS2 SpX-32 (Dragon) - Apr 21 (estimated) - https://rocketlaunch.live/launch/crs2-spx-32-dragon for info/stream",
+    "launch_last_update": "2025-04-20T21:05:55+00:00",
+    "subject_title": "Rocket Launch Update"
+}

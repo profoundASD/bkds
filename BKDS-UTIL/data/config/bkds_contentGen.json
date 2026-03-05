@@ -1,0 +1,27 @@
+{
+    "BKDS_AUTO_STEP_CONTENT_GEN_SUBJ_POSTS": {
+        "type": "python",
+        "script_path": "$BKDS_UTIL_PYTHON",
+        "script": "bkds_contentPostGen_parallel.py"
+    },
+    "BKDS_AUTO_STEP_CONTENT_GEN_MAIN_FEED": {
+        "type": "python",
+        "script_path": "$BKDS_UTIL_PYTHON",
+        "script": "bkds_contentPostGen_MainFeed.py"
+    },
+    "BKDS_AUTO_STEP_CONTENT_GEN_CATEGORY": {
+        "type": "python",
+        "script_path": "$BKDS_UTIL_PYTHON",
+        "script": "bkds_contentPostGen_Category.py"
+    },
+    "BKDS_AUTO_STEP_CONTENT_GEN_ROCKET_LAUNCH": {
+        "type": "bash",
+        "script_path": "$BKDS_UTIL_SHELL",
+        "script": "bkds_backend_rocketLaunchGen.sh"
+    },
+    "BKDS_AUTO_STEP_IMG_MASTER_SHUFFLE": {
+        "type": "python",
+        "script_path": "$BKDS_UTIL_PYTHON",
+        "script": "bkds_imgMasterContentShuffle.py"
+    }
+}

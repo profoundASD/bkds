@@ -1,0 +1,14 @@
+{
+  "directories": [
+    {
+      "path": "/home/aimless76/Documents/Sync/BKDS/BKDS-APP/BKDS-BACKEND/BKDS-AUTOMATION-CONFIG/reporting/data",
+      "last_processed": "2024-12-19T20:16:41"
+    },
+    {
+      "path": "/home/aimless76/Documents/Sync/BKDS/BKDS-APP-LAPTOP-00X/BKDS-BACKEND/BKDS-AUTOMATION-CONFIG/reporting/data",
+      "last_processed": "2024-12-17T17:00:31"
+    }
+  ],
+  "target_dir": "/home/aimless76/Videos/BKDS/BKDS/screenshot_gallery",
+  "processed_index_file": "/home/aimless76/Videos/BKDS/BKDS/screenshot_gallery/indexed_screenshots.json"
+}

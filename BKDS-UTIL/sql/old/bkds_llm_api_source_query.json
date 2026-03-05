@@ -1,0 +1,5 @@
+{
+    "src_data": "v_llm_api_prompt_source",
+    "src_schema": "dev",
+    "sql_query": "SELECT prompt_id, prompt_template_user, prompt_template_system, prompt_key, llm_role, llm_expertise, llm_goal, llm_goal_desc, prompt_type, prompt_intro, prompt_description, data_output_profile, data_source, key_concepts, persona_id, occupation, interests, audiencedesc,trait1, trait2, trait3, trait4, trait5, insight_id, search_term, subj_title, category, page_url, text_chunk FROM dev.v_llm_api_prompt_source"
+}

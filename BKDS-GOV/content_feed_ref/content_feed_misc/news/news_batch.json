@@ -1,0 +1,128 @@
+[
+    {
+        "insight_details": {
+            "url_id": "acfa4cff0c1bae2a20a14f0d6f44776c",
+            "subject_id": "cc07eef998bd9c961e715a5ba34ebbea",
+            "subject_title": " KARK Arkansas News",
+            "data_category": "news",
+            "data_category_id": "ad43d263c6badeb8f86664089136f86e",
+            "data_subject": "news",
+            "data_subject_id": "4d3be9c3fc790ebdf324bd52b5f90737",
+            "content_name": "news"
+        },
+        "default_img": "\/data\/images\/full_size\/news\/bkds_news_UI_kark.jpg",
+        "text_block": {
+            "content":  " KARK Arkansas News",
+            "description":  " KARK Arkansas News"
+        },
+        "media_link": "https://www.youtube.com/@ArkansasmattersOfficial/videos"
+    },
+    {
+        "insight_details": {
+            "url_id": "acfa4cff0c1bae2a20a14f0d6f44776c",
+            "subject_id": "cc07eef998bd9c961e715a5ba34ebbea",
+            "subject_title": "THV 11 Arkansas News",
+            "data_category": "news",
+            "data_category_id": "ad43d263c6badeb8f86664089136f86e",
+            "data_subject": "news",
+            "data_subject_id": "4d3be9c3fc790ebdf324bd52b5f90737",
+            "content_name": "news"
+        },
+        "default_img": "\/data\/images\/full_size\/news\/bkds_news_UI_THV11.jpg",
+        "text_block": {
+            "content":  "THV 11 Arkansas News",
+            "description":  "THV 11 Arkansas News"
+        },
+        "media_link": "https://www.youtube.com/@thv11/videos"
+    },
+    {
+        "insight_details": {
+            "url_id": "acfa4cff0c1bae2a20a14f0d6f44776c",
+            "subject_id": "cc07eef998bd9c961e715a5ba34ebbea",
+            "subject_title": "Springdale, Fayetteville, Fort Smith",
+            "data_category": "news",
+            "data_category_id": "ad43d263c6badeb8f86664089136f86e",
+            "data_subject": "news",
+            "data_subject_id": "4d3be9c3fc790ebdf324bd52b5f90737",
+            "content_name": "news"
+        },
+        "default_img": "\/data\/images\/full_size\/news\/bkds_news_UI_nwaNews.jpg",
+        "text_block": {
+            "content": "Springdale, Fayetteville, Fort Smith",
+            "description": "Springdale, Fayetteville, Fort Smith"
+        },
+        "media_link": "https://www.youtube.com/@4029news/videos"
+    },
+    {
+        "insight_details": {
+            "url_id": "acfa4cff0c1bae2a20a14f0d6f44776c",
+            "subject_id": "cc07eef998bd9c961e715a5ba34ebbea",
+            "subject_title": "Jonesboro Northeast Arkansas Report",
+            "data_category": "news",
+            "data_category_id": "ad43d263c6badeb8f86664089136f86e",
+            "data_subject": "news",
+            "data_subject_id": "4d3be9c3fc790ebdf324bd52b5f90737",
+            "content_name": "news"
+        },
+        "default_img": "\/data\/images\/full_size\/news\/bkds_news_UI_neaNews.jpg",
+        "text_block": {
+            "content": "Jonesboro Northeast Arkansas Report",
+            "description": "Jonesboro Northeast Arkansas Report"
+        },
+        "media_link": "https://www.youtube.com/@NEAReport"
+    },
+    {
+        "insight_details": {
+            "url_id": "acfa4cff0c1bae2a20a14f0d6f44776c",
+            "subject_id": "cc07eef998bd9c961e715a5ba34ebbea",
+            "subject_title": "8 News Now Las Vegas News",
+            "data_category": "news",
+            "data_category_id": "ad43d263c6badeb8f86664089136f86e",
+            "data_subject": "news",
+            "data_subject_id": "4d3be9c3fc790ebdf324bd52b5f90737",
+            "content_name": "news"
+        },
+        "default_img": "\/data\/images\/full_size\/news\/bkds_news_UI_KTNV.jpg",
+        "text_block": {
+            "content": "8 News Now Las Vegas News",
+            "description": "8 News Now Las Vegas News"
+        },
+        "media_link": "https://www.youtube.com/@8newsnowlasvegas656/videos"
+    },
+    {
+        "insight_details": {
+            "url_id": "acfa4cff0c1bae2a20a14f0d6f44776c",
+            "subject_id": "cc07eef998bd9c961e715a5ba34ebbea",
+            "subject_title": "Fox 4 Dallas Fort Worth",
+            "data_category": "news",
+            "data_category_id": "ad43d263c6badeb8f86664089136f86e",
+            "data_subject": "news",
+            "data_subject_id": "4d3be9c3fc790ebdf324bd52b5f90737",
+            "content_name": "news"
+        },
+        "default_img": "\/data\/images\/full_size\/news\/bkds_news_UI_Fox4DFW.jpg",
+        "text_block": {
+            "content": "Fox 4 Dallas Fort Worth",
+            "description": "Fox 4 Dallas Fort Worth"
+        },
+        "media_link": "https://www.youtube.com/@fox4news/videos"
+    },
+    {
+        "insight_details": {
+            "url_id": "acfa4cff0c1bae2a20a14f0d6f44776c",
+            "subject_id": "cc07eef998bd9c961e715a5ba34ebbea",
+            "subject_title": "K3 South Texas Corpus Christie News",
+            "data_category": "news",
+            "data_category_id": "ad43d263c6badeb8f86664089136f86e",
+            "data_subject": "news",
+            "data_subject_id": "4d3be9c3fc790ebdf324bd52b5f90737",
+            "content_name": "news"
+        },
+        "default_img": "\/data\/images\/full_size\/news\/bkds_news_UI_CorpusNews.jpg",
+        "text_block": {
+            "content": "K3 South Texas Corpus Christie News",
+            "description": "K3 South Texas Corpus Christie News"
+        },
+        "media_link": "https://www.youtube.com/@KIIITV/videos"
+    }
+]

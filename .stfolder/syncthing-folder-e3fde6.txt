@@ -1,0 +1,5 @@
+# This directory is a Syncthing folder marker.
+# Do not delete.
+
+folderID: BKDS-APP-DEV
+created: 2024-11-30T08:01:20-06:00

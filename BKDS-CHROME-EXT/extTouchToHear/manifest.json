@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "BKDS Touch to Hear",
+  "description": "This extension transforms Wikipedia and localhost pages",
+  "version": "1.1",
+  "permissions": ["tabs", "webRequest"],
+  "host_permissions": [
+    "http://localhost:3000/*",
+    "http://localhost:*/",
+    "http://127.0.0.1:3000/*",
+    "http://127.0.0.1:*/",
+    "*://*.wikipedia.org/*",
+    "*://*.wikidata.org/*",
+    "*://*.wikimedia.org/*"  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost:3000/*",
+        "http://localhost:*/",
+        "http://127.0.0.1:3000/*",
+        "http://127.0.0.1:*/",
+        "*://*.wikipedia.org/*",
+        "*://*.wikidata.org/*",
+        "*://*.wikimedia.org/*"
+      ],
+      "js": ["bkds_bundledWink.js"],
+      "run_at": "document_end"    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; img-src 'self' data: chrome-extension:;"
+  }
+}

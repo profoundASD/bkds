@@ -1,0 +1,191 @@
+
+/* Common styles for image containers */
+.profile-photo-container,
+.profile-photo-container-branding {
+    display: flex;
+    justify-content: left;
+    padding: 1%;
+    max-width: 18vw;
+    min-width: 5vh;
+    width: 18vw;
+    height: auto;
+}
+
+/* Common styles for images inside both containers */
+.profile-photo-container img,
+.profile-photo-container-branding img {
+    animation: zoomIn .3s ease-out forwards;
+    object-fit: contain;
+    max-width: 1vw;
+}
+
+
+
+
+/* Animation keyframes */
+@keyframes zoomFromCenter {
+    0% {
+        transform: scale(25);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Section width styles */
+.section-1 {
+    width: 20vw;
+}
+
+.section-2 {
+    width: 40vw;
+}
+
+.section-3 {
+    width: 20vw;
+}
+
+/* Brokeep styles */
+.brokeep {
+    opacity: 0.8;
+    animation: zoomIn .15s steps(5, end);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    min-width: 3vw;
+    max-height: 6vh;
+    height: auto;
+}
+
+.brokeepText {
+    color: #4e4e4e;
+    text-align: center;
+    font-size: 1vw;
+    font-family: 'Poller One', sans-serif;
+    white-space: nowrap;
+    letter-spacing: .25em;
+    opacity: 0.8;
+    padding: 3%;
+}
+
+@keyframes typing {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+/* Power center styles */
+.power_center_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    object-fit: contain;
+}
+
+/* Power center control styles */
+.power_center_control {
+    min-width: 5.2vw;
+    animation: zoomIn .8s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: .75vw;
+    color:#ffffff;
+    background-color: rgba(119, 119, 119, 0.8);
+    padding:1%;
+}
+
+.power_center_control img {
+    max-width: 2.25rem;
+}
+
+/* Icon animation styles */
+.icon.start-animation {
+    visibility: visible;
+    animation: zoomFromCenter .3s ease-out forwards;
+}
+
+/* Styles for the container of default_home_insight */
+.center-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Aligns children (default_home_insight and arrow-controls) vertically */
+}
+
+/* Styles for arrow controls when active */
+.arrow-controls.active {
+    display: flex; /* Show the container */
+}
+
+/* Styles for arrow controls when not active */
+.arrow-controls {
+    display: none; /* Hide the container by default */
+}
+
+/* Styles for the left and right arrow containers */
+.moreapp-icon-grid-left,
+.moreapp-icon-grid-right {
+    /* Add specific styles for left and right arrows here */
+    /* Example: */
+    flex: 1; /* Each takes equal width */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    font-size:0;
+
+}
+
+/* Styles for the left and right arrow containers */
+.moreapp-icon-grid-left img,
+.moreapp-icon-grid-right img {
+    /* Add specific styles for left and right arrows here */
+    /* Example: */
+    max-width:3vw;
+}
+
+.moreapp-icon-grid-left.active,
+.moreapp-icon-grid-right.active {
+    /* Add specific styles for left and right arrows here */
+    /* Example: */
+    display:flex;
+}
+
+
+

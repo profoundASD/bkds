@@ -1,0 +1,41 @@
+{
+    "BKDS_LLM_PROCESS_FLOW": {
+        "query_key": "bkds_llmHygiene_source",
+        "out_file_prefix": "bkds_llm",
+        "out_type": "json",
+        "target_schema": "dev",
+        "target_object": "stg_llm_processed_contents",
+        "output_subfolder": "output",
+        "process_subfolder": "llm_process",
+        "sleep_duration_min": 3,
+        "sleep_duration_max": 12,
+        "db_ref_keys": ["url_id", "prompt_id", "persona_id", "page_url"],
+        "maint_keys": ["role", "llm_date"],
+        "output_rec_key": "record_id",
+        "timestamp_format": "%Y%m%d_%H%M%S",
+        "log_messages": true
+    },
+    "BKDS_LLM_SUBJ_ENRICH_API": {
+        "batch_id": "BKDS_HYGIENE_LLM_ONLY",
+        "out_file_prefix": "bkds_llm",
+        "query_key": "bkds_llmHygiene_source",
+        "out_type": "json",
+        "output_subfolder": "output",
+        "process_subfolder": "llm_process",
+        "llm_model": "gpt-3.5-turbo",
+        "llm_temp": 0.7,
+        "llm_endpoint": "https://api.openai.com/v1/chat/completions",
+        "llm_content_type": "application/json",
+        "chat_wait": 2,
+        "sleep_duration_min": 3,
+        "sleep_duration_max": 12,
+        "log_messages": true,
+        "db_ref_keys": ["url_id", "prompt_id", "persona_id", "page_url"],
+        "maint_keys": ["role", "llm_date"],
+        "output_rec_key": "record_id",
+        "timestamp_format": "%Y%m%d_%H%M%S",
+        "choices": [],
+        "role": "",
+        "model": ""
+    }
+}

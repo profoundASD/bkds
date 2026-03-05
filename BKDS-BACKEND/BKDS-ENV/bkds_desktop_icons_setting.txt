@@ -1,0 +1,1 @@
+sudo chattr +i ~/.config/xfce4/desktop/icons*

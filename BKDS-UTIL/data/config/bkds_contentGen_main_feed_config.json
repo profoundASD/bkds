@@ -1,0 +1,18 @@
+{
+    "categories": {
+      "flowers_trees_plants": {
+        "records_to_get": "38"
+      },
+      "aviation": {
+        "records_to_get": "68"
+      },
+      "places": {
+        "records_to_get": "38"
+      },
+      "rockets": {
+        "records_to_get": "28"
+      }
+    },
+    "target_folder": "main_feed",
+    "target_file_name": "main_feed_batch.json"
+  }

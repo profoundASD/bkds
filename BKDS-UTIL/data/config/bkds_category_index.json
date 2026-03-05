@@ -1,0 +1,10 @@
+{
+    "places": "./public/data/output/subjGen/contentPostGen/bkds_contentPostGen_20240510172449_places_20240510172452.json",
+    "aviation": "./public/data/output/subjGen/contentPostGen/bkds_contentPostGen_20240510172449_aviation_20240510172453.json",
+    "tv_and_entertainment": "./public/data/output/subjGen/contentPostGen/bkds_contentPostGen_20240510172449_tv_and_entertainment_20240510172453.json",
+    "transportation": "./public/data/output/subjGen/contentPostGen/bkds_contentPostGen_20240510172449_transportation_20240510172453.json",
+    "us_waterways": "./public/data/output/subjGen/contentPostGen/bkds_contentPostGen_20240510172449_us_waterways_20240510172454.json",
+    "flowers_trees_plants": "./public/data/output/subjGen/contentPostGen/bkds_contentPostGen_20240510172449_flowers_trees_plants_20240510172454.json",
+    "rockets": "./public/data/output/subjGen/contentPostGen/bkds_contentPostGen_20240510172449_rockets_20240510172454.json",
+    "main_feed": "./public/data/output/subjGen/contentPostGen/bkds_contentPostGen_20240510172449_main_feed_20240510172454.json"
+}

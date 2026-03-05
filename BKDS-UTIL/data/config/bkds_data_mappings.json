@@ -1,0 +1,215 @@
+[
+{
+"bkds_imgCaceGen_load": {
+"data_source": "img_cache",
+"target_columns": ["img_url_id","img_name","img_type","img_path","img_small_path","img_medium_path","img_large_path","data_source","load_date","load_proc","load_key","load_seq"],
+"target_schema": "dev",
+"target_table": "stg_img_cache"
+},
+ "bkds_subjGen_load_flickr": {
+ "data_source": "flickr",
+ "target_columns": ["subjectID","searchID", "resultID", "insightID", "category", "searchTerm", "imageurl", "utcTime", "load_id", "load_date", "load_job"],
+ "target_schema": "dev",
+ "target_table": "stg_flickr_api_results"
+ }
+ ,
+ "bkds_subjGen_load_youtube": {
+ "data_source": "youtube",
+ "target_columns": ["subjectID", "searchID", "resultID", "insightID", "category", "searchTerm", "title", "description", "thumbnail", "videoUrl", "timestamp", "utcTime", "load_id", "load_date", "load_job"],
+ "target_schema": "dev",
+ "target_table": "stg_youtube_api_results"
+ }
+ ,
+ "bkds_subjGen_load_wiki": {
+ "data_source": "wiki",
+ "target_columns": ["subjectID", "searchID", "resultID", "insightID", "category", "searchTerm", "wiki_result_id", "subjTitle", "pageURL", "extract", "imageUrl", "utcTime", "load_id", "load_date", "load_job"],
+ "target_schema": "dev",
+ "target_table": "stg_wiki_api_results"
+ }
+ ,"bkds_subjGen_source_index_all": {
+ 
+ "query_id": "select_query_subject_index_all",
+ "src_data": "v_subject_index",
+ "src_schema": "dev",
+ "src_columns":"distinct insight_id, search_id, search_term, data_category, subject ",
+ "sql_query": "SELECT {src_columns} FROM {src_schema}.{src_data} {clause};"
+ }
+ ,"bkds_subjGen_source_index_wip": {
+ 
+ "query_id": "select_query_subject_index_wip",
+ "src_data": "v_subject_gen_source",
+ "src_columns": "subject_id, insight_id, search_id, orig_search_term as search_term, data_category, subject",
+ "src_schema": "dev",
+ "clause" : "where coalesce(orig_search_term, '$') not in (select coalesce(searchterm, '$') from dev.stg_api_source_api_results) and length(subject_id) > 0 and data_category='flowers_trees_plants'",
+ "sql_query": "SELECT distinct {src_columns} FROM {src_schema}.{src_data} {clause};"
+ }
+ ,"bkds_select_query_get_column_names": {
+ 
+ "query_id": "select_query_get_column_names",
+ "src_data": "columns",
+ "src_schema": "information_schema",
+ "clause" : "WHERE table_schema = {src_schema} AND table_name = {src_obj} ORDER BY ordinal_position",
+ "sql_query": "SELECT {src_columns} FROM {src_schema}.{src_data} {clause}"
+ }
+ ,"bkds_llmPromptjGen_source":
+ {
+ "src_data": "v_llm_api_prompt_source",
+ "src_schema": "dev",
+ "src_columns": "prompt_id, prompt_template_user, prompt_template_system, prompt_key, llm_role, llm_expertise, llm_goal, llm_goal_desc, prompt_type, prompt_intro, prompt_description, data_output_profile, data_source, key_concepts, persona_id, occupation, interests, audiencedesc,trait1, trait2, trait3, trait4, trait5, url_id, search_term, subj_title, category, page_url, text_chunk",
+ "sql_query": "SELECT {src_columns} FROM {src_schema}.{src_data} {clause}",
+ "clause" : "limit 5"
+ }
+ ,"bkds_llmPromptjGen_source_places":
+ {
+ "src_data": "v_llm_api_prompt_source_places",
+ "src_schema": "dev",
+ "src_columns": "prompt_id, prompt_template_user, prompt_template_system, prompt_key, llm_role, llm_expertise, llm_goal, llm_goal_desc, prompt_type, prompt_intro, prompt_description, data_output_profile, data_source, key_concepts, persona_id, occupation, interests, audiencedesc,trait1, trait2, trait3, trait4, trait5, url_id, search_term, subj_title, category, page_url, text_chunk",
+ "sql_query": "SELECT {src_columns} FROM {src_schema}.{src_data} {clause}",
+ "clause" : "limit 5"
+ }
+ ,"bkds_llmHygiene_source":
+ {
+ "src_data": "v_llm_api_hygiene_source",
+ "src_schema": "dev",
+ "src_columns": "prompt_id, prompt_template_user, prompt_template_system, prompt_key, llm_role, llm_expertise, llm_goal, llm_goal_desc, prompt_type, prompt_intro, prompt_description, data_output_profile, data_source, key_concepts, persona_id, occupation, interests, audiencedesc,trait1, trait2, trait3, trait4, trait5, url_id, search_term, subj_title, category, page_url, text_chunk",
+ "sql_query": "SELECT {src_columns} FROM {src_schema}.{src_data} {clause}",
+ "clause" : "limit 3"
+ }
+ ,"bkds_contentGen_videos_query_key":
+ {
+ "src_data": "v_web_content_video",
+ "src_schema": "dev",
+ "clause" :"",
+ "src_columns":"insight_id, insight_id, search_id, subject_id, subject_title, description, search_term, video_url, video_title, thumb_url, data_source",
+ "sql_query": "SELECT {src_columns} FROM {src_schema}.{src_data}"
+ }
+ ,"bkds_contentGen_img_query_key":
+ {
+ "src_data": "v_web_content_img",
+ "src_schema": "dev",
+ "src_columns" :"insight_id, insight_id, search_id, subject_id, subject_title, description, search_term, image_url, data_source",
+ "clause" :"",
+ "sql_query": "SELECT {src_columns} FROM {src_schema}.{src_data}"
+ } 
+ ,"bkds_contentGen_text_query_key":
+ {
+ "src_data": "v_web_content_text",
+ "src_schema": "dev",
+ "clause" :"",
+ "src_columns" : "insight_id, search_id, search_id, subject_id, subject_title, description, search_term, page_url, subject_content, data_source",
+ "sql_query": "SELECT {src_columns} FROM {src_schema}.{src_data}"
+ } 
+ ,"bkds_contentGen_insight_query_key":
+ {
+ "src_data": "v_web_content_insights",
+ "src_schema": "dev",
+ "clause" :"",
+ "src_columns": "insight_id, search_id, subject_id, subject_title, search_term, data_category, data_subject",
+ "sql_query": "SELECT {src_columns} FROM {src_schema}.{src_data}"
+ }
+ ,"bkds_contentGen_web_feed_master":
+ {
+ "src_data": "tbl_web_content_feed_master",
+ "src_schema": "wh",
+ "clause" :"order by subject_title asc, url_id desc",
+ "src_columns": "cluster_id, url_id, subject_id, subject_title, default_img, data_category, data_category_id, data_subject, data_subject_id, images, videos, featured_images, related_topics, page_url, subject_content, content_name",
+ "sql_query": "SELECT {src_columns} FROM {src_schema}.{src_data}"
+ }
+ ,"bkds_nodejs_content_feed_master":
+ {
+ "src_data": "v_bkds_nodejs_content_feed_master",
+ "src_schema": "wh",
+ "clause" :"where img_url like '%jason%' limit 100",
+ "src_columns": "cluster_id, url_id, subject_id, subject_title, default_img, data_category, data_category_id, data_subject, data_subject_id, images, videos, featured_images, related_topics, page_url, subject_content, content_name",
+ "sql_query": "SELECT {src_columns} FROM {src_schema}.{src_data}"
+ }
+ ,"bkds_contentGen_image_index":
+ {
+ "src_data": "v_web_content_img_master",
+ "src_schema": "dev",
+ "clause" :"",
+ "src_columns": "insight_id,search_id,img_url,img_url_id,img_title,data_source,data_category,data_category_id,data_subject,data_subject_id,img_small,img_med,img_large,img_seq",
+ "sql_query": "SELECT distinct {src_columns} FROM {src_schema}.{src_data} {clause}"
+ }
+ ,"bkds_contentGen_video_index":
+ {
+ "src_data": "v_web_content_video",
+ "src_schema": "dev",
+ "clause" :"",
+ "src_columns": "vid_url, vid_title, vid_url_id, vid_thumb, vid_thumb_id, title, description,data_category, data_subject_id, 'youtube' as data_source, data_category, data_category_id",
+ "sql_query": "SELECT distinct {src_columns} FROM {src_schema}.{src_data} {clause}"
+ }
+ ,"bkds_subGroupjGen_source":
+ {
+ "src_data": "v_subject_group_source",
+ "src_schema": "dev",
+ "clause" :"",
+ "src_columns": "record_id,raw_content",
+ "sql_query": "SELECT {src_columns} FROM {src_schema}.{src_data}"
+ }
+ ,"bkds_imgCaceGen_select":
+ {
+ "src_data": "tbl_web_content_img_cache",
+ "src_schema": "wh",
+ "clause" :" TABLESAMPLE SYSTEM (100)",
+ "src_columns": "img_url_id, data_source, img_type, img_url",
+ "sql_query": "SELECT distinct {src_columns} FROM {src_schema}.{src_data} {clause}"
+ }
+ ,"bkds_imgCaceGen_stg_select":
+ {
+ "src_data": "stg_img_cache",
+ "src_schema": "dev",
+ "clause" :"",
+ "src_columns": "img_url_id",
+ "sql_query": "SELECT distinct {src_columns} FROM {src_schema}.{src_data}"
+ }
+ ,"bkds_imgCaceGen_select_yt1":
+ {
+ "src_data": "v_web_content_img_cache1",
+ "src_schema": "dev",
+ "clause" :"where data_source='youtube' order by random() limit 1",
+ "src_columns": "img_url_id, data_source, img_type, img_url",
+ "sql_query": "SELECT {src_columns} FROM {src_schema}.{src_data} {clause}"
+ }
+ ,"bkds_imgCaceGen_select_yt2":
+ {
+ "src_data": "v_web_content_img_cache2",
+ "src_schema": "dev",
+ "clause" :"where data_source='youtube' order by random()  limit 2500",
+ "src_columns": "img_url_id, data_source, img_type, img_url",
+ "sql_query": "SELECT {src_columns} FROM {src_schema}.{src_data} {clause}"
+ }
+ ,"bkds_imgCaceGen_select_yt3":
+ {
+ "src_data": "v_web_content_img_cache2",
+ "src_schema": "dev",
+ "clause" :"where data_source='youtube' order by random() limit 550",
+ "src_columns": "img_url_id, data_source, img_type, img_url",
+ "sql_query": "SELECT {src_columns} FROM {src_schema}.{src_data} {clause}"
+ }
+ ,"bkds_imgCaceGen_select_yt4":
+ {
+ "src_data": "v_web_content_img_cache1",
+ "src_schema": "dev",
+ "clause" :"where data_source='youtube' order by random() limit 1550",
+ "src_columns": "img_url_id, data_source, img_type, img_url",
+ "sql_query": "SELECT {src_columns} FROM {src_schema}.{src_data} {clause}"
+ }
+ ,"bkds_imgCaceGen_select_flickr":
+ {
+"src_data": "v_web_content_img_cache",
+"src_schema": "wh",
+"clause" :"where data_source='flickr' order by random() limit 150",
+"src_columns": "img_url_id, data_source, img_type, img_url",
+"sql_query": "SELECT {src_columns} FROM {src_schema}.{src_data} {clause}"
+}
+ ,"bkds_imgCaceGen_select_wiki":
+ {
+"src_data": "v_web_content_img_cache",
+"src_schema": "wh",
+"clause" :"where data_source='wiki' order by random() limit 150",
+"src_columns": "img_url_id, data_source, img_type, img_url",
+"sql_query": "SELECT {src_columns} FROM {src_schema}.{src_data} {clause}"
+}
+ }
+]

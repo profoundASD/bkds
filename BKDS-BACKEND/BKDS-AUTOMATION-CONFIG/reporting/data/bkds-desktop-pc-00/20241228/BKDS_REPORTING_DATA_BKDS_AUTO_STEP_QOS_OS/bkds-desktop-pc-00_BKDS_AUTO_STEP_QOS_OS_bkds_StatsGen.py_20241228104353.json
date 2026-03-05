@@ -1,0 +1,10 @@
+{
+    "os_version": "Ubuntu 24.04.1",
+    "ui_version": "xfce4-session 4.18.3 (Xfce 4.18)",
+    "kernel_version": "6.8.0-51-generic",
+    "last_update_check": "2024-12-28 09:42:31.964393827 -0600",
+    "reboot_required": "Restart Later",
+    "WARNING": "apt does not have a stable CLI interface. Use with caution in scripts.",
+    "start_utc_ts": "2024-12-28T16:43:53Z",
+    "end_utc_ts": "2024-12-28T16:43:54Z"
+}

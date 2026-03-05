@@ -1,0 +1,44 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Node
+node_modules/
+dist/
+build/
+
+# Archives / backups
+*.zip
+*.tar
+*.tar.gz
+*.gz
+*.gzip
+*.bak
+*.prev
+*_prev
+backup/
+bkup/
+archive/
+
+# Media (if code-only)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.tiff
+
+# Project outputs (adjust paths)
+BKDS-UTIL/data/wiki/output/

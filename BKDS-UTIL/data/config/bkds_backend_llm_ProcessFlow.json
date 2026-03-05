@@ -1,0 +1,45 @@
+{
+    "COMMON_CONFIG": {
+        "out_file_prefix": "bkds_llm",
+        "out_type": "json",
+        "output_subfolder": "output",
+        "process_subfolder": "llm_process",
+        "sleep_duration_min": 1,
+        "sleep_duration_max": 8,
+        "db_ref_keys": ["url_id", "prompt_id", "persona_id", "page_url"],
+        "maint_keys": ["role", "llm_date"],
+        "output_rec_key": "record_id",
+        "timestamp_format": "%Y%m%d_%H%M%S",
+        "log_messages": true
+    },
+    "BKDS_LLM_PROCESS_HYGIENE_FLOW": {
+        "query_key": "bkds_llmHygiene_source",
+        "target_schema": "dev",
+        "model_vary": false,
+        "target_object": "stg_llm_processed_contents",
+        "$ref": "COMMON_CONFIG"
+    },
+    "BKDS_LLM_PROCESS_SUBJGEN_FLOW": {
+        "query_key": "bkds_llmPromptjGen_source",   
+        "model_vary": true,
+        "target_schema": "dev",
+        "target_object": "stg_llm_processed_subjgen_contents",
+        "$ref": "COMMON_CONFIG"
+    }
+    ,
+    "BKDS_LLM_PROCESS_SUBJGEN_FLOW_PLACES": {
+        "query_key": "bkds_llmPromptjGen_source_places",   
+        "target_schema": "dev",
+        "target_object": "stg_llm_processed_subjgen_contents",
+        "$ref": "COMMON_CONFIG"
+    },
+    "BKDS_LLM_API_CONFIG": {
+        "llm_model_1": "gpt-3.5-turbo",
+        "llm_model_0": "gpt-4",
+        "llm_temp": 0.5,
+        "llm_endpoint": "https://api.openai.com/v1/chat/completions",
+        "llm_content_type": "application/json",
+        "timestamp_format": "%Y%m%d_%H%M%S"
+    }
+
+}

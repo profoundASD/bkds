@@ -1,0 +1,13 @@
+{
+    "launch_mission_id": 5000,
+    "launch_mission": "TBD",
+    "launch_pad_id": 127,
+    "launch_pad_name": "Jiuquan Satellite Launch Center",
+    "launch_pad_country": "China",
+    "launch_desc": "A CAS Space Kinetica-1 rocket will\nlaunch the TBD mission on Friday,\nDecember 27, 2024 at 1:03 AM (UTC).",
+    "launch_est_time": "2024-12-27T01:03Z",
+    "launch_purpose": "Unconfirmed Payload",
+    "launch_quicktext": "Kinetica-1 - TBD - Dec 27 (estimated) - https://rocketlaunch.live/launch/tbd for info/stream",
+    "launch_last_update": "2024-12-24T22:59:27+00:00",
+    "subject_title": "Rocket Launch Update"
+}

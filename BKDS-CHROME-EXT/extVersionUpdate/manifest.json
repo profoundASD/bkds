@@ -1,0 +1,12 @@
+{
+  "name": "BKDS Version Info",
+  "version": "99.0",
+  "manifest_version": 3,
+  "description": "Version Control",
+  "content_scripts": [
+    {
+      "matches": ["http://localhost/html/main", "https://localhost/html/main"],
+      "js": ["releaseManagement.js"]
+    }
+  ]
+}
