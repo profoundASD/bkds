@@ -1,0 +1,37 @@
+[
+    {
+        "type": "category",
+        "filter_name": "transportation",
+        "file_path": "./public/data/output/subjGen/contentPostGen/bkds_contentPostGen_20240428151449_transportation_20240428151452.json"
+    },
+    {
+        "type": "category",
+        "filter_name": "us_waterways",
+        "file_path": "./public/data/output/subjGen/contentPostGen/bkds_contentPostGen_20240428151449_us_waterways_20240428151452.json"
+    },
+    {
+        "type": "category",
+        "filter_name": "tv_and_entertainment",
+        "file_path": "./public/data/output/subjGen/contentPostGen/bkds_contentPostGen_20240428151449_tv_and_entertainment_20240428151452.json"
+    },
+    {
+        "type": "category",
+        "filter_name": "places",
+        "file_path": "./public/data/output/subjGen/contentPostGen/bkds_contentPostGen_20240428151449_places_20240428151452.json"
+    },
+    {
+        "type": "category",
+        "filter_name": "aviation",
+        "file_path": "./public/data/output/subjGen/contentPostGen/bkds_contentPostGen_20240428151449_aviation_20240428151453.json"
+    },
+    {
+        "type": "category",
+        "filter_name": "rockets",
+        "file_path": "./public/data/output/subjGen/contentPostGen/bkds_contentPostGen_20240428151449_rockets_20240428151453.json"
+    },
+    {
+        "type": "category",
+        "filter_name": "main_feed",
+        "file_path": "./public/data/output/subjGen/contentPostGen/bkds_contentPostGen_20240428151449_main_feed_20240428151453.json"
+    }
+]

@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "BKDS Touch to Hear Alt Sites",
+  "description": "This extension transforms Wikipedia and localhost pages",
+  "version": "1.1",
+  "permissions": ["tabs", "webRequest"],
+  "host_permissions": [
+    "*://*.rocketlaunch.live/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.rocketlaunch.live/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; img-src 'self' data: chrome-extension:;"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "BKDS Search Result Opacity Transition",
+  "version": "1.1",
+  "description": "Fade in pages on google.com from opacity 0 to 1 over 1.5 seconds.",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.google.com/*"],
+      "exclude_matches": [
+        "*://photos.google.com/*",
+        "*://www.google.com/photos/*",
+        "*://www.google.com/maps/*",
+        "*://maps.google.com/*",
+        "*://earth.google.com/*",
+        "*://www.google.com/earth/*"
+      ],
+      "css": ["style.css"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

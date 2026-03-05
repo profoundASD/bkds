@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "BKDS Zoom Extension",
+  "version": "1.0",
+  "description": "Set zoom level to 150% for specific URLs.",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://example.com/*", "http://localhost/web/html/games/hjAviationMemory.html"],
+      "js": ["content.js"]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "BKDS Wikipedia Transformation",
+  "version": "1.0",
+  "description": "Reads Wikipedia content aloud with text-to-speech and highlights sentences.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions":  ["*://*.wikipedia.org/*", "*://*.wikidata.org/*", "*://*.wikimedia.org/*"],
+  "action": {
+    "default_title": "Activate Text Reader"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.wikipedia.org/*", "*://*.wikidata.org/*", "*://*.wikimedia.org/*" ],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["Home.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

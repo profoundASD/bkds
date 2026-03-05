@@ -1,0 +1,267 @@
+
+/* Link styling */
+.post-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-thumb {
+    max-width: 25vw;
+    min-width: 20vw;
+    border-radius:1vw;
+}
+
+.rocket-post-thumb {
+    max-width: 9vw;
+    min-width: 6vw;
+    padding:1vw;
+}
+
+.rocket-post-thumb-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.watch-button {
+    border: 2px solid black;
+    border-radius: .5vw; /* Slightly rounded corners */
+    text-align: center; /* Center the text */
+    padding: 10px; /* Add some padding for better appearance */
+    display: inline-block; /* Inline block for proper sizing */
+    background-color: white; /* Background color */
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+}
+
+.watch-button a {
+    text-decoration: none; /* Removes underline from the link */
+    color: black; /* Text color */
+    font-weight: bold; /* Make the text bold */
+}
+
+
+/* Container for individual posts */
+.post-container {
+    border-radius: 1vw;
+    margin: 2% auto 3%;
+    border: 1.5px solid #1f1f1f;
+    overflow: hidden;
+    max-width: 80%;
+    object-fit: contain;
+}
+
+
+
+/* Top section of the post */
+.top-post-section {
+    display: flex;
+    background-color: #777;
+    color:#ffffff;
+    font-size:2vw;
+    padding: 1.5%;
+}
+
+/* Styling for logo/icons */
+.iconLogo {
+    animation: fadeIn 1.25s ease-out forwards;
+    border-radius: 1vw;
+    max-width: 4vw;
+    min-width: 1vw;
+    margin-right: 10px;
+}
+
+.bottom-post-section {
+    display: flex;
+    flex-direction: row; /* Change to row layout */
+    align-items: flex-start; /* Align items to the start of the flex container */
+    justify-content: space-between; /* Space out the child elements */
+    background-color: #ffffff;
+    padding: 2%;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    font-size: 1.25vw;
+    color: #4e4e4e;
+    overflow: hidden;
+    padding:1%;
+}
+
+/* Add media query for screens wider than 800px */
+@media (min-width: 800px) {
+    .bottom-post-section {
+        flex-direction: row; /* Display side by side */
+        justify-content: center; /* Center horizontally */
+        align-items: flex-start; /* Align items to the top */
+    }
+    
+    .post-thumb-container {
+        display: flex;
+        align-items: flex-start; /* Align items to the top */
+        margin-right: 10px; /* Add spacing between image and text */
+    }
+    
+    .text-description {
+        flex-grow: 1; /* Allow text to take remaining space */
+        padding:1.2vw;
+    }
+}
+
+/* Keyframes for animations */
+@keyframes zoomIn {
+    0% {
+        transform: scale(.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Thumbnail Grid Container */
+.thumbnail-grid-container {
+    position: relative;
+    padding: 0.05vw;
+    gap: 0.25vw;
+    transition: max-width 0.5s ease, visibility 0.5s ease;
+    visibility: hidden;
+}
+
+/* Add a class for when the container is active/visible */
+.thumbnail-grid-container.active {
+    visibility: visible;
+}
+
+/* Styling for the insight container */
+.insight-container {
+    display: flex;
+    align-items: center;
+    margin: 0.5vw;
+    padding: 0.5vw;
+    border: 0.5px solid #4e4e4e;
+    border-radius: 1vw;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 80%;
+}
+
+.insight-pair {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    visibility: hidden;
+    display: none;
+    border-radius: 1vw;
+    
+}
+
+.insight-pair.active {
+    visibility: visible;
+    display: flex;
+}
+
+.text-bubble-container {
+    flex-grow: 1;
+    
+}
+
+.text-description {
+    border-radius: 1vw;
+    min-height: 20vh;
+    max-height: 40vh;
+    overflow: hidden;
+}
+
+
+.text-bubble {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh 3vw;
+    border: 0.5px solid #4e4e4e;
+    border-radius: 1vw;
+    color: #4e4e4e;
+    font-size: 1vw;
+
+}
+
+.text-gallery-container {
+    display: flex;
+    flex-direction: column; /* Stack text and gallery vertically */
+    width: 50%; /* Take up half of the bottom post section */
+    pointer-events: none; /* Disables clicking */
+
+}
+
+.text-bubble:hover {
+    background-color: white;
+    color: #000;
+}
+
+.insight-pair > .thumbnail-image {
+    flex: 0 0 auto;
+    height: auto;
+    max-width: 8vw;
+    min-width: 3vw;
+    animation: zoomIn 0.5s ease-out forwards;
+    padding: 1%;
+    border-radius: 1vw;
+}
+
+
+.gallery-thumb {
+    max-width: 6vw;
+    min-width: 2vw;
+    display: inline-block; /* Display thumbnails inline */
+    margin: .15vw; /* Add some space around each thumbnail */
+    border-radius: .25vw;
+}
+
+.gallery-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow thumbnails to wrap to next line */
+    align-items: center; /* Align thumbnails vertically */
+    padding: .15vw; /* Padding inside the container */
+    overflow: hidden; /* Enable scrolling if content overflows */
+    flex-grow: 1; /* Allow the gallery to take up remaining space */
+}
+
+/* Disable clicking on the post link in the default view */
+.post-container .post-link {
+    pointer-events: none;
+}
+
+/* Enable clicking on the post link when the container is active */
+.post-container.active .post-link {
+    pointer-events: auto;
+    width: 80%;
+}
+
+.gallery-container .post-link a {
+    pointer-events: none; /* Disables clicking */
+}
+
+.post-container.active .gallery-container.active .post-link.active a {
+    pointer-events: auto; /* Enables clicking */
+    
+}
+
+.text-gallery-container.active {
+    pointer-events: auto; /* Enables clicking */
+
+}
+

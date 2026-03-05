@@ -1,0 +1,260 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    background: #d3d3d3;
+    color: #4e4e4e;
+    overflow: hidden;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; /* Adjusted to give more space to the middle column */
+    grid-template-areas: 
+        ". top ."
+        "left feed right"
+        ". bottom .";
+    gap: 0.5%;
+    height: 100%;
+
+}
+
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+    display: none;
+}
+.feed-layout {
+    grid-area: feed;
+    grid-column: 2 / 6; /* Position in the center (2fr) */
+    grid-row: 2 / 3;
+    border-radius: .5vw;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    background: #d3d3d3;
+    text-align: center;
+    overflow-y: auto; /* Enable vertical scrolling when content exceeds max height */
+    width:100%;
+}
+
+.main-content-feed{
+   width:100%;
+
+}
+
+.desktop-icon-grid,
+.desktop-icon-grid.active {
+    grid-column: 6 / 6;
+    grid-row: 2 / 3;
+    animation: zoomIn .3s ease-out forwards;
+    display: grid;
+    border-radius: 1vw;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: start;
+    padding-top: 2vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    max-height: 74vh;
+    scroll-behavior: smooth;
+
+}
+
+.desktop-icon-grid.active {
+    grid-template-columns: repeat(1, 1fr);
+
+}
+
+.desktop-icon-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* Animation keyframes */
+@keyframes zoomIn {
+    0% {
+        transform: scale(25);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes typewriter {
+    0% {
+        width: 0;
+    }
+    5% {
+        width: 100%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+/* Typography */
+.profile-username-branding,
+.foreverU-header,
+.desktop-icon-grid-header {
+    font-family: 'Poller One', sans-serif;
+    letter-spacing: .2em;
+    opacity:80%;
+}
+
+.desktop-icon-grid-header{
+    font-size: 2em; /* Makes the font size twice as large as the parent element's font size */
+    font-weight: bold; /* Makes the text bold */
+}
+
+.profile-username-branding {
+    font-size: 1.8vw;
+    justify-content:left;
+}
+
+
+.foreverU-header {
+    font-size:2em;
+    align-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 15s forwards;
+    color: #4e4e4e;
+}
+
+.desktop-icon-grid-header {
+    font-size: 1.3em;
+    color: #4e4e4e;
+    font-family: 'Poller One', sans-serif;
+    white-space: nowrap;
+    letter-spacing: .2em;
+    text-align: center;
+    padding-top: 1.8vh;
+}
+
+/* Media queries */
+@media (max-width: 600px) {
+    .icons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .icons-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Left and right sections */
+.left,.right {
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    background: #d3d3d3;
+    object-fit:contain;
+    overflow: hidden;
+    align-items:center;
+}
+
+.left.active{
+    overflow-y: auto;
+}
+
+
+.center-right, .center-left {
+    position: relative;
+    background: #d3d3d3;
+    font-size: 1.2em;
+    overflow-y: auto;
+    border-radius: 1vw;
+    min-height: 93vh;
+    object-fit:contain;
+    overflow: hidden;
+}
+
+.center-right{
+    background-color:#d3d3d3;
+    min-width:10vw;
+}
+.center-left{
+    background-color:#d3d3d3;
+    min-width:16vw;
+}
+
+.center-right.active{
+    max-width:8vw;
+    height:100%;
+
+}
+
+.center-left.active{
+    height:100%;
+    overflow-y: auto;
+}
+
+/* Heatmap styling */
+.large-post {
+    width: 4%;
+}
+
+.medium-post {
+    width: 8%;
+}
+
+.small-post {
+    width: 6%;
+}
+
+.thumbnail-post {
+    width: 4%;
+}
+
+/* Header styling */
+.header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    max-height: 3vw;
+    background-color: rgba(119, 119, 119, 0.6);
+    overflow: hidden;
+}
+
+.header.active{
+    display:none;
+}
+
+/* Common styling for insight info sections */
+
+#insight-info-branding,
+#insight-info-top,
+#insight-info-controls {
+    text-align: center;
+    padding: .5%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1vw;
+    text-align: center;
+    display: flex;
+}
+
+#insight-info-branding-text{
+    text-align:left;
+    margin-left:-42vw;
+    font-size:1.5em;
+    font-family: 'Poller One', sans-serif;
+    opacity:70%;
+}
+
+#insight-info-controls {
+    border-radius: 1vw;
+}
+
+#insight-info-user {
+    background-color: #4e4e4e;
+    color: white;
+    border-radius: 1vw;
+}

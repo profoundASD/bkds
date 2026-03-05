@@ -1,0 +1,15 @@
+gets: data from dev.v_subject_gen_source
+gets: media and text content for subjects
+bkds_backend_subjGenDataLoop.sh
+calls:
+  bkds_backend_subjGendData.sh
+  calls:
+    bkds_backend_subjGen_Main.py
+    - bkds_backend_subjGen_API_Wiki
+    - bkds_backend_subjGen_API_Flickr
+    - bkds_backend_subjGen_API_YouTube
+    - bkds_backend_yt_HTMLParse.py
+    - bkds_backend_subjGenLoad.sh
+      calls: 
+        - bkds_backend_subjGen_API_dbload_Results.py
+          loads: stg_[data source]_api_results

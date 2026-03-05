@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "BKDS Wikipedia Media Gallery Close Redirect",
+    "version": "1.0",
+    "description": "Redirects users from Wikipedia media pages back to the original article.",
+    "permissions": ["activeTab"],
+    "host_permissions": [
+        "*://*.wikipedia.org/*",
+        "*://*.wikidata.org/*",
+        "*://*.wikimedia.org/*",
+        "*://*.mediawiki.org/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.wikipedia.org/*",
+                "*://*.wikidata.org/*",
+                "*://*.wikimedia.org/*",
+                "*://*.mediawiki.org/*"
+            ],
+            "js": ["content.js"]
+        }
+    ]
+}

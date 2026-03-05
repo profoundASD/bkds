@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+
+  "name": "BKDS Wiki Transform",
+    "description": "This extension transforms wikipedia",
+  "version": "1.1",
+  "permissions": ["tabs", "webRequest"],
+  "update_url": "https://github.com/j630-io/BKDS/blob/main/hjHJUpdate.xml",
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+            {
+              "matches": ["https://*.wikipedia.org/*"],
+              "js": [ "bkds_highlightLinks.js" ,"bkds_bundledWink.js"],
+              "run_at": "document_end",
+              "css": ["bkds_wiki.css", "bkds_gallery.css"],
+              "permissions": ["tabs", "webRequest"]
+            }
+          ],
+    "web_accessible_resources": [
+            {
+              
+              "matches": ["https://*.wikipedia.org/*"],
+              "resources": [ "./images*", "./font*"]
+            }
+          ]
+
+}            
+

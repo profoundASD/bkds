@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message</title>
+    <link rel="stylesheet" href="../../css/bkdsDesktopControl.css">
+</head>
+<body>
+    <div style="padding-top: 10%; padding-left: 5%;" id="text"></div>
+    <script>
+        // Function to get URL parameters by name
+        function getUrlParameter(name) {
+            name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+    
+        // Get the 'message' parameter from the URL
+        var message = getUrlParameter('message');
+    
+        // Display the message on the page
+        const el = document.getElementById('text');
+    
+        // Function to add text to element one letter at a time
+        function typeWriter(text, i) {
+            if (i < text.length) {
+                el.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(() => typeWriter(text, i), 50);
+            }
+        }
+    
+        // Check if there is a message from the URL and use it if available
+        if (message) {
+            typeWriter(message, 0);
+        } else {
+            // Your dynamic message goes here
+            const dynamicMessage = "Checking for Update!";
+            typeWriter(dynamicMessage, 0);
+        }
+    </script>
+    
+</body>
+</html>
