@@ -44,3 +44,8 @@ archive/
 BKDS-UTIL/data/wiki/output/
 
 BKDS-NODEJS/public/data/audio/speech/recognition/
+
+BKDS-BACKEND/BKDS-AUTOMATION-CONFIG/reporting/data/bkds-desktop-pc-00/
+BKDS-NODEJS/public/data/audio/speech/recognition/
+BKDS-NODEJS/public/data/config/bkds_bannedWords.json
+BKDS-NODEJS/public/data/config/bkds_tts_api.json
