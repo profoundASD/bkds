@@ -42,3 +42,5 @@ archive/
 
 # Project outputs (adjust paths)
 BKDS-UTIL/data/wiki/output/
+
+BKDS-NODEJS/public/data/audio/speech/recognition/
